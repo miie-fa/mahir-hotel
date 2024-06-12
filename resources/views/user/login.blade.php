@@ -76,7 +76,20 @@ background: #1a1a1d;
 color: white;
 
 }
-     </style>
+.label-sign{
+    margin-left: 40%;
+    margin-top: 5%;
+}
+
+.icons{
+    margin-left: 30%;
+    margin-top: 5%;
+}
+.icons i{
+    font-size: 25px;
+    padding: 0 10px;
+}
+ </style>
 </head>
 <body class="body">
             <div class="text">
@@ -108,9 +121,15 @@ color: white;
         <button class="sign-btn">Sign In</button>
         <div class="label-sign">
             <label for="">Or Sign With</label>
+        </div>
+        <div class="icons">
             <i class="fa-brands fa-facebook"></i>
             <i class="fa-brands fa-google"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-github"></i>
         </div>
+
+        
     </div>
         
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
