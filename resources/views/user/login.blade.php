@@ -118,7 +118,7 @@ color: white;
             <input type="checkbox" id="remember-me" name="remember-me">
             <label for="remember-me">Remember Me</label>
         </div>
-        <button class="sign-btn">Signin</button>
+        <button class="sign-btn">Sign In</button>
         <div class="label-sign">
             <label for="">Or Sign With</label>
         </div>
