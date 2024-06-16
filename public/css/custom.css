@@ -1,0 +1,145 @@
+#main-navbar {
+    border-bottom: 5px solid #f8f9fa;
+}
+
+#main-navbar a:hover,
+#main-navbar .active {
+    border-bottom-color: black;
+    transition: border-color 500ms;
+}
+
+.bottom-left {
+    bottom: 100px;
+    left: 50px;
+    background-color: rgb(0, 52, 52);
+    padding: 10px;
+    height: 50px;
+    width: 150px;
+}
+
+.bottom-left h1 {
+    position: absolute;
+    bottom: 100px;
+    left: 10px;
+    font-size: 40px;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.room-gallery img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 5000;
+    height: 10000;
+    margin-top: 300px
+}
+
+.custom-font {
+    font-family: 'Dancing Script', sans-serif;
+}
+
+.pemesanan {
+    background-color: #F2F2F2;
+}
+
+.booking-info {
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    margin-top: 0;
+    padding: 20px;
+}
+
+.booking-info div {
+    margin-bottom: 10px;
+}
+
+.booking-info .icon {
+    margin-right: 5px;
+}
+
+.booking-info strong {
+    display: inline-block;
+    width: 100px;
+}
+
+.booking-info .amount {
+    text-align: right;
+    float: right;
+}
+
+.cek {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    margin: 0px 0;
+}
+
+.footer .container-fluid {
+    background-color: #111;
+    color: #fff;
+}
+
+.font-weight-bold {
+    font-weight: bold;
+}
+
+.footer .bg-dark {
+    background-color: #111;
+    color: #fff;
+}
+
+.text-light {
+    color: #fff;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.py-3 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.rounded {
+    border-radius: 0.25rem;
+}
+
+.list-unstyled {
+    list-style-type: none;
+    padding: 0;
+}
+
+.fa-2x {
+    font-size: 2em;
+}
+
+.px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}

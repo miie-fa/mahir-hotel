@@ -1,15 +1,11 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\RoomController;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.app');
 });
 
-Route::get('/rooms/search', [RoomController::class, 'search'])->name('rooms.search');
-Route::get('/rooms/results', [RoomController::class, 'searchResults'])->name('rooms.searchResults');
-Route::get('/rooms/{room}/reserve', [ReservationController::class, 'create'])->name('reservations.create');
-Route::post('/rooms/{room}/reserve', [ReservationController::class, 'store'])->name('reservations.store');
-Route::get('/reservations/{reservation}', [ReservationController::class, 'show'])->name('reservations.show');
+Route::get('/rooms', [RoomController::class, 'index'])->name('rooms.index');
+Route::get('/rooms/filter', [RoomController::class, 'filterRooms'])->name('rooms.filter');
