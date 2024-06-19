@@ -356,6 +356,14 @@
                 justify-content: space-between;
                 max-width: 26rem;
             }
+            .footer {
+            background-color: #162034;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            width: 100%;
+            bottom: 0;
+            }
          
 
            
@@ -801,6 +809,10 @@
     </section>
         </span>
 
+    <footer class="footer">
+        <div class="logo">Hotel Citra Megah</div>
+        <p>Copyright &copy; 2023 Hotel Citra Megah</p>
+        </footer>
      
 
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
