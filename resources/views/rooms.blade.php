@@ -277,6 +277,11 @@
                 margin-left: 5%;
                 margin-bottom: 1%;
             }
+            .roomlistgroup{
+                
+                display: flex;
+            }
+           
             .roomlist {
                 margin-left: 5%;
             }
@@ -309,7 +314,7 @@
                 color: #00887a;
                 padding-left: 30%;
             }
-            .roomoof {
+            .roomout {
                 color: #ff0000;
                 padding-left: 30%;
             }
@@ -319,15 +324,41 @@
                 border: none;
                 border-radius: 5px;
             }
-            .btn-oof {
+            .btn-out {
                 color: white;
                 background-color: #a0a0a0;
                 border: none;
                 border-radius: 5px;
             }
-            .img-oof {
+            .img-out {
                 filter: opacity(50%);
             }
+            .orderdetail{
+                margin-left: 0.5%;
+                width: 28.5rem;
+            }
+            .underlined-text {
+                position: relative; 
+                display: inline-block; 
+                padding-bottom: 5px;
+            }       
+            .underlined-text::after {
+                content: ''; 
+                position: absolute; 
+                bottom: 0; 
+                left: 0; 
+                width: 26rem; 
+                height: 1px; 
+                background-color: black; 
+            }
+            .flex-a{
+                display: flex;
+                justify-content: space-between;
+                max-width: 26rem;
+            }
+         
+
+           
         </style>
     </head>
     <body>
@@ -553,193 +584,224 @@
                 </ul>
             </div>
         </section>
-        <section class="roomlist">
-            <div class="card mb-3" style="max-width: 900px">
-                <div class="row g-0">
-                    <div class="col-md-5">
-                        <img
-                            src="{{ asset('assets/single.jpg') }}"
+       
+        <span class="roomlistgroup">
+    <section class="roomlist">
+        <div class="card mb-3" style="max-width: 900px">
+            <div class="row g-0">
+                <div class="col-md-5">
+                    <img
+                        src="{{ asset('assets/single.jpg') }}"
+                        class="img-fluid"
+                        alt="..."
+                    />
+                </div>
+                <div class="col-md-7">
+                    <div class="card-body">
+                        <h5 class="card-title">Single Room</h5>
+                        <div class="star-rating">
+                            <span class="fas fa-star"></span>
+                            <span class="fas fa-star"></span>
+                            <span class="fas fa-star"></span>
+                            <span class="fas fa-star"></span>
+                            <span class="fas fa-star"></span>
+                            <h6 class="star-amount">(735)</h6>
+                            <h6 class="roomavail">
+                                | Tersisa 4 kamar lagi
+                            </h6>
+                        </div>
+                        <b class="card-text">Fasilitas</b>
+                        <ul class="split-list">
+                            <li>1 kamar mandi</li>
+                            <li>Kulkas mini</li>
+                            <li>1 tempat tidur double</li>
+                            <li>High Speed WiFi</li>
+                            <li>Sarapan</li>
+                            <li>TV</li>
+                        </ul>
+                        <div class="flex">
+                            <h3 class="card-text">Rp 350.000</h3>
+    
+                            <h6><span class="blue-text">/malam</span></h6>
+                            <button type="button" class="btn btn-dark">
+                                Pesan Kamar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-3" style="max-width: 900px">
+            <div class="row g-0">
+                <div class="col-md-5">
+                    <img
+                        src="{{ asset('assets/standard.jpg') }}"
+                        class="img-fluid"
+                        alt="..."
+                    />
+                </div>
+                <div class="col-md-7">
+                    <div class="card-body">
+                        <h5 class="card-title">Standard Room</h5>
+                        <div class="star-rating">
+                            <span class="fas fa-star"></span>
+                            <span class="fas fa-star"></span>
+                            <span class="fas fa-star"></span>
+                            <span class="fas fa-star"></span>
+                            <span class="fas fa-star"></span>
+                            <h6 class="star-amount">(735)</h6>
+                            <h6 class="roomavail">
+                                | Tersisa 3 kamar lagi
+                            </h6>
+                        </div>
+                        <b class="card-text">Fasilitas</b>
+                        <ul class="split-list">
+                            <li>1 kamar mandi</li>
+                            <li>Kulkas mini</li>
+                            <li>1 tempat tidur double</li>
+                            <li>High Speed WiFi</li>
+                            <li>Sarapan</li>
+                            <li>TV</li>
+                        </ul>
+                        <div class="flex">
+                            <h3 class="card-text">Rp 400.000</h3>
+    
+                            <h6><span class="blue-text">/malam</span></h6>
+                            <button type="button" class="btn-selected">
+                                Dipilih
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-3" style="max-width: 900px">
+            <div class="row g-0">
+                <div class="col-md-5">
+                    <span class="img-out"
+                        ><img
+                            src="{{ asset('assets/superior.jpg') }}"
                             class="img-fluid"
                             alt="..."
-                        />
-                    </div>
-                    <div class="col-md-7">
-                        <div class="card-body">
-                            <h5 class="card-title">Single Room</h5>
-                            <div class="star-rating">
-                                <span class="fas fa-star"></span>
-                                <span class="fas fa-star"></span>
-                                <span class="fas fa-star"></span>
-                                <span class="fas fa-star"></span>
-                                <span class="fas fa-star"></span>
-                                <h6 class="star-amount">(735)</h6>
-                                <h6 class="roomavail">
-                                    | Tersisa 4 kamar lagi
-                                </h6>
-                            </div>
-                            <b class="card-text">Fasilitas</b>
-                            <ul class="split-list">
-                                <li>1 kamar mandi</li>
-                                <li>Kulkas mini</li>
-                                <li>1 tempat tidur double</li>
-                                <li>High Speed WiFi</li>
-                                <li>Sarapan</li>
-                                <li>TV</li>
-                            </ul>
-                            <div class="flex">
-                                <h3 class="card-text">Rp 350.000</h3>
-
-                                <h6><span class="blue-text">/malam</span></h6>
-                                <button type="button" class="btn btn-dark">
-                                    Pesan Kamar
-                                </button>
-                            </div>
+                    /></span>
+                </div>
+    
+                <div class="col-md-7">
+                    <div class="card-body">
+                        <h5 class="card-title">Superior Room</h5>
+                        <div class="star-rating">
+                            <span class="fas fa-star"></span>
+                            <span class="fas fa-star"></span>
+                            <span class="fas fa-star"></span>
+                            <span class="fas fa-star"></span>
+                            <span class="fas fa-star"></span>
+                            <h6 class="star-amount">(735)</h6>
+                            <h6 class="roomout">
+                                | Habis, tunggu di lain hari
+                            </h6>
+                        </div>
+                        <b class="card-text">Fasilitas</b>
+                        <ul class="split-list">
+                            <li>1 kamar mandi</li>
+                            <li>Kulkas mini</li>
+                            <li>1 tempat tidur double</li>
+                            <li>High Speed WiFi</li>
+                            <li>Sarapan</li>
+                            <li>TV</li>
+                        </ul>
+                        <div class="flex">
+                            <h3 class="card-text">Rp 600.000</h3>
+    
+                            <h6><span class="blue-text">/malam</span></h6>
+                            <button type="button" class="btn-out">
+                                Pesan Kamar
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section class="roomlist">
-            <div class="card mb-3" style="max-width: 900px">
-                <div class="row g-0">
-                    <div class="col-md-5">
-                        <img
-                            src="{{ asset('assets/.jpg') }}"
-                            class="img-fluid"
-                            alt="..."
-                        />
-                    </div>
-                    <div class="col-md-7">
-                        <div class="card-body">
-                            <h5 class="card-title">Standard Room</h5>
-                            <div class="star-rating">
-                                <span class="fas fa-star"></span>
-                                <span class="fas fa-star"></span>
-                                <span class="fas fa-star"></span>
-                                <span class="fas fa-star"></span>
-                                <span class="fas fa-star"></span>
-                                <h6 class="star-amount">(735)</h6>
-                                <h6 class="roomavail">
-                                    | Tersisa 3 kamar lagi
-                                </h6>
-                            </div>
-                            <b class="card-text">Fasilitas</b>
-                            <ul class="split-list">
-                                <li>1 kamar mandi</li>
-                                <li>Kulkas mini</li>
-                                <li>1 tempat tidur double</li>
-                                <li>High Speed WiFi</li>
-                                <li>Sarapan</li>
-                                <li>TV</li>
-                            </ul>
-                            <div class="flex">
-                                <h3 class="card-text">Rp 400.000</h3>
-
-                                <h6><span class="blue-text">/malam</span></h6>
-                                <button type="button" class="btn-selected">
-                                    Dipilih
-                                </button>
-                            </div>
+        </div>
+        <div class="card mb-3" style="max-width: 900px">
+            <div class="row g-0">
+                <div class="col-md-5">
+                    <img
+                        src="{{ asset('assets/deluxe.jpg') }}"
+                        class="img-fluid"
+                        alt="..."
+                    />
+                </div>
+                <div class="col-md-7">
+                    <div class="card-body">
+                        <h5 class="card-title">Deluxe Twin Bed</h5>
+                        <div class="star-rating">
+                            <span class="fas fa-star"></span>
+                            <span class="fas fa-star"></span>
+                            <span class="fas fa-star"></span>
+                            <span class="fas fa-star"></span>
+                            <span class="fas fa-star"></span>
+                            <h6 class="star-amount">(735)</h6>
+                            <h6 class="roomavail">
+                                | Tersisa 5 kamar lagi
+                            </h6>
+                        </div>
+                        <b class="card-text">Fasilitas</b>
+                        <ul class="split-list">
+                            <li>1 kamar mandi</li>
+                            <li>Kulkas mini</li>
+                            <li>2 tempat tidur</li>
+                            <li>High Speed WiFi</li>
+                            <li>Sarapan</li>
+                            <li>TV</li>
+                        </ul>
+                        <div class="flex">
+                            <h3 class="card-text">Rp 800.000</h3>
+    
+                            <h6><span class="blue-text">/malam</span></h6>
+                            <button type="button" class="btn btn-dark">
+                                Pesan Kamar
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="roomlist">
-            <div class="card mb-3" style="max-width: 900px">
-                <div class="row g-0">
-                    <div class="col-md-5">
-                        <span class="img-oof"
-                            ><img
-                                src="{{ asset('assets/superior.jpg') }}"
-                                class="img-fluid"
-                                alt="..."
-                        /></span>
-                    </div>
-
-                    <div class="col-md-7">
-                        <div class="card-body">
-                            <h5 class="card-title">Superior Room</h5>
-                            <div class="star-rating">
-                                <span class="fas fa-star"></span>
-                                <span class="fas fa-star"></span>
-                                <span class="fas fa-star"></span>
-                                <span class="fas fa-star"></span>
-                                <span class="fas fa-star"></span>
-                                <h6 class="star-amount">(735)</h6>
-                                <h6 class="roomoof">
-                                    | Habis, tunggu di lain hari
-                                </h6>
-                            </div>
-                            <b class="card-text">Fasilitas</b>
-                            <ul class="split-list">
-                                <li>1 kamar mandi</li>
-                                <li>Kulkas mini</li>
-                                <li>1 tempat tidur double</li>
-                                <li>High Speed WiFi</li>
-                                <li>Sarapan</li>
-                                <li>TV</li>
-                            </ul>
-                            <div class="flex">
-                                <h3 class="card-text">Rp 600.000</h3>
-
-                                <h6><span class="blue-text">/malam</span></h6>
-                                <button type="button" class="btn-oof">
-                                    Pesan Kamar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        </div>
+    </section>
+    <section class="orderdetail">
+        <div class="card border-secondary mb-3" style="max-width: 28.5rem;">
+            <div class="card-header"><b>Ringkasan Pemesanan</b></div>
+        <div class="card-body text-secondary">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"><i class="fa fa-calendar-check"></i> Check in</label>
+               
+                <input type="" class="form-control" id="exampleFormControlInput1" placeholder="Minggu, 20.00 - 16 July 2023">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"><i class="fa fa-calendar-minus"></i> Check Out</label>
+                <input type="" class="form-control" id="exampleFormControlInput1" placeholder="Senin, 20.00 - 17 July 2023">
+              </div>
+              <p> <i class="fa fa-building" ></i> Kamar</p>
+              <div class="underlined-text">Superior Room</div>
+              <div class="flex-a">
+                <p>1 malam</p>
+                <h6>Rp 400.000</h6>
             </div>
-        </section>
-        <section class="roomlist">
-            <div class="card mb-3" style="max-width: 900px">
-                <div class="row g-0">
-                    <div class="col-md-5">
-                        <img
-                            src="{{ asset('assets/deluxe.jpg') }}"
-                            class="img-fluid"
-                            alt="..."
-                        />
-                    </div>
-                    <div class="col-md-7">
-                        <div class="card-body">
-                            <h5 class="card-title">Single Room</h5>
-                            <div class="star-rating">
-                                <span class="fas fa-star"></span>
-                                <span class="fas fa-star"></span>
-                                <span class="fas fa-star"></span>
-                                <span class="fas fa-star"></span>
-                                <span class="fas fa-star"></span>
-                                <h6 class="star-amount">(735)</h6>
-                                <h6 class="roomavail">
-                                    | Tersisa 5 kamar lagi
-                                </h6>
-                            </div>
-                            <b class="card-text">Fasilitas</b>
-                            <ul class="split-list">
-                                <li>1 kamar mandi</li>
-                                <li>Kulkas mini</li>
-                                <li>2 tempat tidur</li>
-                                <li>High Speed WiFi</li>
-                                <li>Sarapan</li>
-                                <li>TV</li>
-                            </ul>
-                            <div class="flex">
-                                <h3 class="card-text">Rp 800.000</h3>
-
-                                <h6><span class="blue-text">/malam</span></h6>
-                                <button type="button" class="btn btn-dark">
-                                    Pesan Kamar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="flex-a">
+                <p class="underlined-text">Jumlah kamar :</p>
+                
+                <h6>1 Kamar</h6>
             </div>
-        </section>
+              <div class="flex-a">
+                <b>Total</b>
+                <h5>Rp 700.000</h5>
+            </div>
+            <div class="input_grup input_btn">
+                <button type="button" class="btn btn-light">Lanjutkan Pemesanan</button>
+            </div>
+        </div>
+    </section>
+        </span>
+
+     
 
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
         <script
