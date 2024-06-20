@@ -194,6 +194,20 @@
     color: #ddd;
  }
 
+ @media (max-width: 767px) {
+    .booking_form .row .col-md-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 575px) {
+    .booking_form .row .col-md-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
     /* REKOMENDASI */
     .carousel-item img {
       width: 70%;
@@ -314,6 +328,45 @@
                 font-size: 1.2em;
             }
         }
+
+
+        /* WHY US */
+        .section5{
+            background-size: cover;
+            position: relative;
+            background-image:url({{asset('assets/backcer.webp')}});
+                
+        }
+        .section5 p{
+            color: white;
+            font-size: 1rem;
+        }
+        .section5 h2{
+            color: white;
+        }
+        .card {
+      background-color: rgba(255, 255, 255, 0.8);
+      border:none;
+      border-radius: 10%;
+      min-height: 250px; /* Atur tinggi minimum kartu */
+    }
+    .card-body {
+      text-align: center;
+
+    }
+    .icon {
+      font-size: 2rem;
+      color: #007bff;
+    }
+    .card-icon {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+    @media (max-width: 767px) {
+      .section5 {
+        padding: 40px 0;
+      }
+    }
     </style>
 </head>
 <body>
@@ -448,6 +501,42 @@
                 </div>
             </section>
 
+            
+ 
+  <section class="section5 md-4 mb-4 my-5 ">
+    <p class="text-center mb-4 mt-5">Why Us</p>
+    <h2 class="text-center mb-4">Apa yang kami tawarkan di hotel ini untuk anda?</h2>
+    <div class="row justify-content-center d-flex ">
+      <div class="col-md-4 mb-4">
+        <div class="card mx-2 my-2 mt-5">
+          <div class="card-body text-center">
+            <i class="fas fa-star card-icon"></i>
+            <h5 class="card-title">Kualitas Terbaik</h5>
+            <p class="card-text text-dark">Kami selalu berkomitmen untuk menyediakan kualitas tempat tinggal terbaik, lengkap dengan segala hal, mulai dari pelayanan hingga fasilitas yang kami tawarkan.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card mx-2 my-2 mt-5">
+          <div class="card-body text-center">
+            <i class="fas fa-map-marker-alt card-icon"></i>
+            <h5 class="card-title">Lokasi yang Strategis</h5>
+            <p class="card-text text-dark">Terletak di pusat kota, kami memposisikan lokasi mudah ke tempat-tempat penting, seperti pusat perbelanjaan, wisata, dan atraksi wisata terkenal.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-5">
+        <div class="card mx-2 my-2 mt-5 mb-5">
+          <div class="card-body text-center">
+            <i class="fas fa-bed card-icon"></i>
+            <h5 class="card-title">Kenyamanan yang Luar Biasa</h5>
+            <p class="card-text text-dark">Kamar-kamar kami dilengkapi dengan segala fasilitas modern yang Anda butuhkan untuk tinggal yang nyaman.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{{-- ----------------------------------------SCRIPT-------------------------------- --}}
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
