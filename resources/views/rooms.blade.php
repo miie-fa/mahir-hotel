@@ -25,7 +25,7 @@
                 height: 90vh;
                 background-size: cover;
                 position: relative;
-                background-image: url({{ asset('assets/room1.jpg') }});
+                background-image:url({{asset('assets/room1.jpg')}});
             }
 
             .navbar {
@@ -185,6 +185,7 @@
             }
             .resize {
                 margin-left: 5%;
+                margin-top: 2%;
             }
 
             .img-thumbnail {
@@ -364,7 +365,21 @@
             width: 100%;
             bottom: 0;
             }
-         
+            .btna{
+               
+                margin-top: 31%;
+                margin-left: 5%;
+                font-size: 250%;
+                color: white;
+                background-color: #162034;
+                border-radius: 10px;
+                width: 13.5rem;
+                height: 6rem;
+                
+            }
+
+
+      
 
            
         </style>
@@ -483,24 +498,15 @@
                 <div class="login-signup">
                     <button class="login-btn">Login/Sign Up</button>
                 </div>
+                
             </nav>
 
-            <div class="main" id="home">
-                <div class="text">
-                    <h2>
-                        <span
-                            >Hotel Citra Megah - Nikmati <br />Pengalaman
-                            Manginap <br />yang Luar Biasa</span
-                        >
-                    </h2>
-                    <p class="text-p">
-                        Jadikan Liburan Anda Luar Biasa di Hotel Citra Megah,<br />
-                        Dapatkan Kenyamanan dan Pelayanan Terbaik!
-                    </p>
-                </div>
-            </div>
+            
+            <button type="button" class="btna">
+                Kamar
+            </button>
         </header>
-
+       
         <section class="resize">
             <div class="text">
                 <h3>Ruangan Hotel Citra Megah</h3>
@@ -599,7 +605,7 @@
             <div class="row g-0">
                 <div class="col-md-5">
                     <img
-                        src="{{ asset('assets/single.jpg') }}"
+                        src="{{asset('assets/single.jpg')}}"
                         class="img-fluid"
                         alt="..."
                     />
@@ -643,7 +649,7 @@
             <div class="row g-0">
                 <div class="col-md-5">
                     <img
-                        src="{{ asset('assets/standard.jpg') }}"
+                        src="{{asset('assets/standard.jpg')}}"
                         class="img-fluid"
                         alt="..."
                     />
@@ -688,7 +694,7 @@
                 <div class="col-md-5">
                     <span class="img-out"
                         ><img
-                            src="{{ asset('assets/superior.jpg') }}"
+                            src="{{asset('assets/superior.jpg')}}"
                             class="img-fluid"
                             alt="..."
                     /></span>
@@ -733,7 +739,7 @@
             <div class="row g-0">
                 <div class="col-md-5">
                     <img
-                        src="{{ asset('assets/deluxe.jpg') }}"
+                        src="{{asset('assets/deluxe.jpg')}}"
                         class="img-fluid"
                         alt="..."
                     />
@@ -809,11 +815,10 @@
     </section>
         </span>
 
-    <footer class="footer">
-        <div class="logo">Hotel Citra Megah</div>
-        <p>Copyright &copy; 2023 Hotel Citra Megah</p>
-        </footer>
-     
+        <footer class="footer">
+            <div class="logo">Hotel Citra Megah</div>
+            <p>Copyright &copy; 2023 Hotel Citra Megah</p>
+            </footer>
 
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
         <script

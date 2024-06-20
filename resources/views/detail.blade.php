@@ -25,7 +25,7 @@
                 height: 90vh;
                 background-size: cover;
                 position: relative;
-                background-image: url("../../public/assets/room1.jpg");
+                background-image:url({{asset('assets/room1.jpg')}});
             }
 
             .navbar {
@@ -277,6 +277,7 @@
             .topcard {
                 margin-left: 5%;
                 margin-bottom: 1%;
+                margin-top: 5%;
             }
             .roomlistgroup{
                 
@@ -357,6 +358,11 @@
                 justify-content: space-between;
                 max-width: 26rem;
             }
+            .flex-b{
+                display: flex;
+                justify-content: space-between;
+                max-width: 60rem;
+            }
             .footer {
             background-color: #162034;
             color: #fff;
@@ -376,6 +382,12 @@
                 width: 13.5rem;
                 height: 6rem;
                 
+            }
+            .roomdetail {
+                margin-left: 5%;
+            }
+            .roomdetail ul {
+                list-style-type: none;
             }
 
 
@@ -507,278 +519,69 @@
             </button>
         </header>
        
-        <section class="resize">
-            <div class="text">
-                <h3>Ruangan Hotel Citra Megah</h3>
-                <p>
-                    Hotel Citra Megah menyediakan beberapa ruangan yang tentunya
-                    sangat cocok dengan selera anda, dengan tampilan, kualitas
-                    dan fasilitas yang sangat terjamin <br />untuk menunjang
-                    berbagai kebutuhan sehari hari anda, dan kami siap 24 jam
-                    melayani anda jika membutuhkan bantuan apapun, ayo segera
-                    pesan kamar di bawah ini<br />
-                    dan dapatkan diskonya di pemesanan pertama anda!
-                </p>
-            </div>
-        </section>
-        <section class="section_container booking_container">
-            <form action="" class="booking_form">
-                <div class="input_grup">
-                    <div>
-                        <select id="room-type" name="room-type" required>
-                            <option selected>Pilihan Kamar</option>
-                            <option value="standard">Standard Room</option>
-                            <option value="superior">Superior Room</option>
-                            <option value="twin">Twin Room</option>
-                        </select>
-                    </div>
-                </div>
 
-                <div class="input_grup">
-                    <input
-                        type="enabled"
-                        id="date-input"
-                        placeholder="Check in"
-                        required
-                    />
-                </div>
-                <div id="calendar" class="calendar hidden">
-                    <div class="calendar-header">
-                        <span id="prev-month">&#9664;</span>
-                        <span id="month-year"></span>
-                        <span id="next-month">&#9654;</span>
-                    </div>
-                    <div class="calendar-body">
-                        <div class="calendar-weekdays"></div>
-                        <div class="calendar-days"></div>
-                    </div>
-                </div>
-
-                <div class="input_grup">
-                    <input
-                        type=""
-                        id="check-out"
-                        name="check-out"
-                        value="Check Out"
-                        required
-                    />
-                </div>
-
-                <div class="input_grup">
-                    <label for="promo-code">Kode Promo:</label>
-                    <input type="text" id="promo-code" name="promo-code" />
-                </div>
-
-                <div class="input_grup input_btn">
-                    <button type="button" class="btn btn-light">BOOKING</button>
-                </div>
-            </form>
-        </section>
         <section class="topcard">
             <div class="text">
-                <h3>pilih kamar</h3>
+                <h3>Kamar Superior</h3>
             </div>
-            <div class="filter">
-                <button
-                    class="btn btn-secondary dropdown-toggle"
-                    type="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                >
-                    Filter:
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Termahal</a></li>
-                    <li>
-                        <a class="dropdown-item" href="#">Populer</a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" href="#">Termurah</a>
-                    </li>
-                </ul>
-            </div>
+
         </section>
        
         <span class="roomlistgroup">
-    <section class="roomlist">
+    <section class="roomdetail">
         <div class="card mb-3" style="max-width: 900px">
             <div class="row g-0">
-                <div class="col-md-5">
+                <div class="col-md-12">
                     <img
-                        src="../../public/assets/single.jpg"
+                        src="{{asset('assets/superior.jpg')}}"
                         class="img-fluid"
                         alt="..."
                     />
                 </div>
-                <div class="col-md-7">
+                <div class="col-md-12">
                     <div class="card-body">
-                        <h5 class="card-title">Single Room</h5>
-                        <div class="star-rating">
-                            <span class="fas fa-star"></span>
-                            <span class="fas fa-star"></span>
-                            <span class="fas fa-star"></span>
-                            <span class="fas fa-star"></span>
-                            <span class="fas fa-star"></span>
-                            <h6 class="star-amount">(735)</h6>
-                            <h6 class="roomavail">
-                                | Tersisa 4 kamar lagi
-                            </h6>
+                        
+                        <div class="flex-b">
+                            <h5 class="card-title">Superior Room</h5>
+                            <div class="star-rating">
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <h6 class="star-amount">(735)</h6>
+                            </div>
                         </div>
+                       
+                        <p>Nikmati kenyamanan superior di kamar Superior kami. Desain interior yang elegan dan mewah menciptakan suasana yang sempurna untuk melepas penat setelah hari yang panjang. kamar luad dengan area tidur dan tempat duduk yang terpisah memberikan privasi dan ruang yang lapang</p>
                         <b class="card-text">Fasilitas</b>
                         <ul class="split-list">
-                            <li>1 kamar mandi</li>
-                            <li>Kulkas mini</li>
-                            <li>1 tempat tidur double</li>
-                            <li>High Speed WiFi</li>
-                            <li>Sarapan</li>
-                            <li>TV</li>
+                            <li>
+                                <i class="fa fa-bath" aria-hidden="true"></i> 1 kamar mandi
+                            </li>
+                            <li>
+                                <i class="fa fa-archive" aria-hidden="true"></i>
+                                 Kulkas mini</li>
+                            <li>
+                                <i class="fa fa-bed" aria-hidden="true"></i>
+                                 1 tempat tidur double</li>
+                            <li>
+                                <i class="fa fa-wifi" aria-hidden="true"></i>
+                                 High Speed WiFi</li>
+                            <li>
+                                <i class="fa fa-coffee" aria-hidden="true"></i>
+
+                                 Sarapan</li>
+                            <li>
+                                <i class="fa fa-tablet" aria-hidden="true"></i>
+                                TV</li>
                         </ul>
-                        <div class="flex">
-                            <h3 class="card-text">Rp 350.000</h3>
-    
-                            <h6><span class="blue-text">/malam</span></h6>
-                            <button type="button" class="btn btn-dark">
-                                Pesan Kamar
-                            </button>
-                        </div>
+                      
                     </div>
                 </div>
             </div>
         </div>
-        <div class="card mb-3" style="max-width: 900px">
-            <div class="row g-0">
-                <div class="col-md-5">
-                    <img
-                        src="../../public/assets/standard.jpg"
-                        class="img-fluid"
-                        alt="..."
-                    />
-                </div>
-                <div class="col-md-7">
-                    <div class="card-body">
-                        <h5 class="card-title">Standard Room</h5>
-                        <div class="star-rating">
-                            <span class="fas fa-star"></span>
-                            <span class="fas fa-star"></span>
-                            <span class="fas fa-star"></span>
-                            <span class="fas fa-star"></span>
-                            <span class="fas fa-star"></span>
-                            <h6 class="star-amount">(735)</h6>
-                            <h6 class="roomavail">
-                                | Tersisa 3 kamar lagi
-                            </h6>
-                        </div>
-                        <b class="card-text">Fasilitas</b>
-                        <ul class="split-list">
-                            <li>1 kamar mandi</li>
-                            <li>Kulkas mini</li>
-                            <li>1 tempat tidur double</li>
-                            <li>High Speed WiFi</li>
-                            <li>Sarapan</li>
-                            <li>TV</li>
-                        </ul>
-                        <div class="flex">
-                            <h3 class="card-text">Rp 400.000</h3>
-    
-                            <h6><span class="blue-text">/malam</span></h6>
-                            <button type="button" class="btn-selected">
-                                Dipilih
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card mb-3" style="max-width: 900px">
-            <div class="row g-0">
-                <div class="col-md-5">
-                    <span class="img-out"
-                        ><img
-                            src="../../public/assets/superior.jpg"
-                            class="img-fluid"
-                            alt="..."
-                    /></span>
-                </div>
-    
-                <div class="col-md-7">
-                    <div class="card-body">
-                        <h5 class="card-title">Superior Room</h5>
-                        <div class="star-rating">
-                            <span class="fas fa-star"></span>
-                            <span class="fas fa-star"></span>
-                            <span class="fas fa-star"></span>
-                            <span class="fas fa-star"></span>
-                            <span class="fas fa-star"></span>
-                            <h6 class="star-amount">(735)</h6>
-                            <h6 class="roomout">
-                                | Habis, tunggu di lain hari
-                            </h6>
-                        </div>
-                        <b class="card-text">Fasilitas</b>
-                        <ul class="split-list">
-                            <li>1 kamar mandi</li>
-                            <li>Kulkas mini</li>
-                            <li>1 tempat tidur double</li>
-                            <li>High Speed WiFi</li>
-                            <li>Sarapan</li>
-                            <li>TV</li>
-                        </ul>
-                        <div class="flex">
-                            <h3 class="card-text">Rp 600.000</h3>
-    
-                            <h6><span class="blue-text">/malam</span></h6>
-                            <button type="button" class="btn-out">
-                                Pesan Kamar
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card mb-3" style="max-width: 900px">
-            <div class="row g-0">
-                <div class="col-md-5">
-                    <img
-                        src="../../public/assets/deluxe.jpg"
-                        class="img-fluid"
-                        alt="..."
-                    />
-                </div>
-                <div class="col-md-7">
-                    <div class="card-body">
-                        <h5 class="card-title">Deluxe Twin Bed</h5>
-                        <div class="star-rating">
-                            <span class="fas fa-star"></span>
-                            <span class="fas fa-star"></span>
-                            <span class="fas fa-star"></span>
-                            <span class="fas fa-star"></span>
-                            <span class="fas fa-star"></span>
-                            <h6 class="star-amount">(735)</h6>
-                            <h6 class="roomavail">
-                                | Tersisa 5 kamar lagi
-                            </h6>
-                        </div>
-                        <b class="card-text">Fasilitas</b>
-                        <ul class="split-list">
-                            <li>1 kamar mandi</li>
-                            <li>Kulkas mini</li>
-                            <li>2 tempat tidur</li>
-                            <li>High Speed WiFi</li>
-                            <li>Sarapan</li>
-                            <li>TV</li>
-                        </ul>
-                        <div class="flex">
-                            <h3 class="card-text">Rp 800.000</h3>
-    
-                            <h6><span class="blue-text">/malam</span></h6>
-                            <button type="button" class="btn btn-dark">
-                                Pesan Kamar
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+       
     </section>
     <section class="orderdetail">
         <div class="card border-secondary mb-3" style="max-width: 28.5rem;">
