@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel Citra Megah</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <link rel="stylesheet" href="{{asset('css/app.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+    <!-- Pikaday JS -->
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+
     <style>
     body {
     margin: 0;
@@ -18,7 +24,7 @@
     height: 90vh;
     background-size: cover;
     position: relative;
-    background-image:url({{asset('assets/room1.jpg')}});
+    background-image:url({{asset('assets/suiteroom.jpg')}});
     }
 
 
@@ -104,6 +110,14 @@
     font-weight: 600;
     text-transform: capitalize;
 }
+
+.text-p{
+    margin-top: 10%;
+    color: white;
+    font-size: 1.2em;
+}
+
+/* BOOOKING */
 .booking_container{
   
     margin-left: 5%;
@@ -142,6 +156,11 @@
     outline : none;
     border: none;
 }
+
+.pointer{
+    cursor: pointer;
+    position: relative;
+}
 .input_grup select{
     display: block;
     width: 100%;
@@ -175,168 +194,131 @@
     color: #ddd;
  }
 
- .recom .text{
-    margin-left: 5%;
- }
-.resize{
-    margin-left: 5%;
+    /* REKOMENDASI */
+    .carousel-item img {
+      width: 70%;
+      height: 70%;
+      object-fit: cover;
+    }
+
+    .container h2{
+        font-size: 40px;
+    }
+    .container p{
+        font-size: 20px;
+    }
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+    background-color: #00887A; /* Ubah warna ikon panah di sini */
 }
 
-.img-thumbnail{
-    width: 20%;
-    border-radius: 10%;
-}
-.text-p{
-    color: #ddd;
-    font-family: Arial, Helvetica, sans-serif;
-}
+        /* ABOUT US */
+        .section4 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            margin-top: 10%;
+        }
 
-.dropdown-icon {
-    position: absolute;
-    right: 10px;
-    pointer-events: none; /* Ikon tidak akan mengganggu klik pada input */
-    font-size: 16px;
-    z-index: 2; /* Pastikan ikon berada di atas input */
-    color: #00887A;
-}
-#date-input {
-    padding: 5px;
-    font-size: 16px;
-    width: 200px;
-    text-align: center;
-    cursor: pointer;
-}
+        .title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-.calendar {
-    position: absolute;
-    top: 100px;
-    border: 1px solid #ccc;
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    z-index:1000;
-}
+        .textt h4 {
+            margin: 0;
+            font-size: 1.5em;
+            color: #00887A;
+        }
 
-.hidden {
-    display: none;
-}
+        .textt h2 {
+            margin: 10px 0 0 0;
+            font-size: 2em;
+        }
 
-.calendar-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: #f0f0f0;
-}
+        .title img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 8px;
+        }
+        .textt {
+            text-align: center;
+            margin-top: 20px;
+            max-width: 800px;
+        }
 
-.calendar-header span {
-    cursor: pointer;
-}
+        .textt p {
+            font-size: 1em;
+            line-height: 1.5;
+        }
 
-.calendar-body {
-    padding: 10px;
-}
+        .Read {
+            margin-top: 20px;
+        }
 
-.calendar-weekdays, .calendar-days {
-    display: flex;
-    flex-wrap: wrap;
-}
+        .btn {
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-.calendar-weekdays div, .calendar-days div {
-    width: 10%;
-    text-align: center;
-    padding: 10px 0;
-}
+        .btn-dark {
+            background-color: #333;
+            color: #fff;
+        }
 
-.calendar-weekdays div {
-    font-weight: bold;
-}
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .section4 {
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: flex-start;
+            }
 
-.calendar-days div {
-    cursor: pointer;
-}
+            .textt {
+                text-align: left;
+                margin-top: 0;
+                max-width: 600px;
+            }
 
-.calendar-days div:hover {
-    background-color: #f0f0f0;
-}      
+            .img {
+                flex: 1;
+                text-align: right;
+                margin-right: 20px;
+            }
+
+            .img img {
+                max-width: 400px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .title h4 {
+                font-size: 2em;
+            }
+
+            .title h2 {
+                font-size: 3em;
+            }
+
+            .textt p {
+                
+                
+            }
+
+            .btn {
+                font-size: 1.2em;
+            }
+        }
     </style>
 </head>
 <body>
 
-<!-- Hero Section -->
-    <!-- Navigation -->
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-    const dateInput = document.getElementById('date-input');
-    const calendar = document.getElementById('calendar');
-    const monthYear = document.getElementById('month-year');
-    const prevMonth = document.getElementById('prev-month');
-    const nextMonth = document.getElementById('next-month');
-    const weekdaysContainer = document.querySelector('.calendar-weekdays');
-    const daysContainer = document.querySelector('.calendar-days');
 
-    const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-    let date = new Date();
-
-    function renderCalendar() {
-        date.setDate(1);
-        const firstDayIndex = date.getDay();
-        const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
-        const prevLastDay = new Date(date.getFullYear(), date.getMonth(), 0).getDate();
-        const lastDayIndex = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDay();
-        const nextDays = 7 - lastDayIndex - 1;
-
-        monthYear.innerText = `${date.toLocaleString('default', { month: 'long' })} ${date.getFullYear()}`;
-
-        let days = '';
-
-        for (let x = firstDayIndex; x > 0; x--) {
-            days += `<div class="prev-date">${prevLastDay - x + 1}</div>`;
-        }
-
-        for (let i = 1; i <= lastDay; i++) {
-            days += `<div>${i}</div>`;
-        }
-
-        for (let j = 1; j <= nextDays; j++) {
-            days += `<div class="next-date">${j}</div>`;
-        }
-
-        daysContainer.innerHTML = days;
-    }
-
-    function renderWeekdays() {
-        let weekdaysHTML = '';
-        weekdays.forEach(day => {
-            weekdaysHTML += `<div>${day}</div>`;
-        });
-        weekdaysContainer.innerHTML = weekdaysHTML;
-    }
-
-    dateInput.addEventListener('click', () => {
-        calendar.classList.toggle('hidden');
-    });
-
-    prevMonth.addEventListener('click', () => {
-        date.setMonth(date.getMonth() - 1);
-        renderCalendar();
-    });
-
-    nextMonth.addEventListener('click', () => {
-        date.setMonth(date.getMonth() + 1);
-        renderCalendar();
-    });
-
-    daysContainer.addEventListener('click', (e) => {
-        if (e.target.textContent !== '') {
-            dateInput.value = `${e.target.textContent} ${monthYear.textContent}`;
-            calendar.classList.add('hidden');
-        }
-    });
-
-    renderWeekdays();
-    renderCalendar();
-});
-
-</script>
     <header>
         <nav class="navbar">
             <div class="logo">Hotel Citra Megah</div>
@@ -369,28 +351,18 @@
                                 <option value="standard">Standard Room</option>
                                 <option value="superior">Superior Room</option>
                                 <option value="twin">Twin Room</option>
+                                <option value="twin">Deluxe Room</option>
+                                <option value="twin">Suite Room</option>
                             </select>
                         </div>
                     </div>
 
                     <div class="input_grup">
-                        <input type="enabled" id="date-input" placeholder="Check in" required>
+                        <input type="text" id="check-in" name="check-in" value="Check In" required class="pointer" readonly>
                     </div>
-                        <div id="calendar" class="calendar hidden">
-                            <div class="calendar-header">
-                                <span id="prev-month">&#9664;</span>
-                                <span id="month-year"></span>
-                                <span id="next-month">&#9654;</span>
-                            </div>
-                            <div class="calendar-body">
-                                <div class="calendar-weekdays"></div>
-                                <div class="calendar-days"></div>
-                            </div>
-                        </div>
-                   
 
                     <div class="input_grup">
-                        <input type="" id="check-out" name="check-out" value="Check Out" required>
+                        <input type="text" id="check-out" name="check-out" value="Check Out" required class="pointer" readonly>
                     </div>
 
                     <div class="input_grup">
@@ -402,35 +374,84 @@
                         <button type="button" class="btn btn-light">BOOKING</button>
                     </div>
                 </form>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        var checkIn = new Pikaday({ field: document.getElementById('check-in') });
+                        var checkOut = new Pikaday({ field: document.getElementById('check-out') });
+                    });
+                </script>
             </section>
 
-            <section class="recom">
-                <div class="text">
-                    <h3>Rekomendasi</h3>
-                    <p>Dibawah ini adalah kamar-kamar yang kami rekomendasikan <br>untuk Anda yang pastinya memiliki kualitas terbaik.</p>
+            <div class="container my-5">
+                <h2 class="text-left mb-4">Rekomendasi</h2>
+                <p class="text-left mb-4">Dibawah ini adalah kamar yang kami rekomendasikan <br>untuk anda dan pastinya memiliki kualitas terbaik.</p>
+                <div id="roomCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <img src="{{asset('assets/standar.jpg')}}" alt="Standard Room">
+                            <h6>Standard Room</h6>
+                        </div>
+                        <div class="col-md-4">
+                          <img src="{{asset('assets/super room.jpg')}}" alt="Superior Room">
+                            <h6>Superior Room</h6>
+                        </div>
+                        <div class="col-md-4">
+                          <img src="{{asset('assets/twinroom.jfif')}}" alt="Twin Room">
+                            <h6>Twin Room</h6>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <img src="{{asset('assets/duluxeroom.jpg')}}" alt="Deluxe Room">
+                            <h6>Deluxe Room</h6>
+                        </div>
+                        <div class="col-md-4">
+                          <img src="{{asset('assets/suiteroom.jpg')}}" alt="Suite Room">
+                            <h6>Suite Room</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#roomCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only"></span>
+                  </a>
+                  <a class="carousel-control-next" href="#roomCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only"></span>
+                  </a>
                 </div>
-                <div class="resize">
-                    <img src="{{asset('assets/standar.jpg')}}" class="img-thumbnail mx-4" alt="">
-                    <img src="{{asset('assets/super room.jpg')}}" class="img-thumbnail mx-4" alt="">
-                    <img src="{{asset('assets/room.jpg')}}" class="img-thumbnail mx-4" alt="">
-                    <img src="{{asset('assets/room1.jpg')}}" class="img-thumbnail mx-4" alt="">
+              </div>
+            <section class="section4" id="aboutus">
+                <div class="title">
+                    <img src="{{asset('assets/about.jpg')}}" alt="Hotel Room">
+                </div>
+                   
+                <div class="textt">
+                    <h4>About Us</h4>
+                    <h2>Selamat Datang di Hotel Citra Megah</h2>
+                    <br><br>
+                    <p>Kami adalah hotel mewah dengan layanan yang tak tertandingi dan keramahan yang hangat. Dengan lokasi strategis di pusat kota, kami menawarkan pengalaman menginap yang tak terlupakan bagi para tamu kami. Staf kami yang profesional dan berpengalaman siap membantu Anda menjadikan setiap kunjungan Anda menjadi istimewa.</p>
+
+                    <div class="icons">
+                        <i class="fa-solid fa-martini-glass-citrus"></i>
+                        <i class="fa-solid fa-dumbbell"></i>
+                        <i class="fa-solid fa-calendar"></i>
+                    </div>
+                    <div class="Read">
+                        <button type="button" class="btn btn-dark">Read More</button>
+                    </div>
                 </div>
             </section>
-
-            <section class="aboutus" id="aboutus">
-                <h4>About Us</h4>
-                <h2>Selamat Datang di Hotel Citra Megah</h2>
-                <div class="img">
-                    <img src="{{asset('assets/frontroom.jpg')}}" alt="">
-                </div>
-                <div class="text">
-                    <p>Kami adalah hotel mewah dengan layanan yang tak tertandingi dan keramahan yang hangat. Dengan lokasi trategis di pusat kota, kami menawarkan pengalaman menginap yang tak terlupakan bagi para tamu kami. Staf kami yang profesional dan berpengalaman siap membantu Anda menjadikan setiap kunjungan Anda menjadi istimewa.</p>
-                </div>
-
-            </section>
-
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
