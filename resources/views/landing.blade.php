@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel Citra Megah</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <link rel="stylesheet" href="{{asset('css/app.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -104,127 +104,127 @@
     left: 5%;
     }
 
-.text h2{
-    font-size: 50px;
-    color: white;
-    font-weight: 600;
-    text-transform: capitalize;
-}
-
-.text-p{
-    margin-top: 10%;
-    color: white;
-    font-size: 1.2em;
-}
-
-/* BOOOKING */
-.booking_container{
-  
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: -4%;
-}
-
-.booking_form{
- 
-    padding: 2rem;
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    background-color: #00887A;
-    border-radius: 10px;
-    transform: translateY(-50%);
-    box-shadow: 5px 5px 20px rgba(0,0,0,0.1);
-}
-.input_grup{
-    flex: 1 1 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.input_grup input{
-    display: block;
-    width: 50%;
-    max-width: 150px;
-    padding-block: 5px;
-    color: var(--text-dark--);
-    font-size: 0.9rem;
-    outline : none;
-    border: none;
-}
-
-.pointer{
-    cursor: pointer;
-    position: relative;
-}
-.input_grup select{
-    display: block;
-    width: 100%;
-    max-width: 150px;
-    padding-block: 5px;
-    color: var(--text-dark--);
-    font-size: 0.9rem;
-    outline : none;
-    border: none;
-}
-
-.input_grup input{
-    display: block;
-    width: 50%;
-    max-width: 150px;
-    padding-block: 5px;
-    color: var(--text-dark--);
-    font-size: 0.9rem;
-    outline : none;
-    border: none;
-}
-
-.input_grup input::placeholder{
-    color: var(--text-light--);
-} 
- .input_grup button{
-    border-radius: 40px;
-    width: 60%;
-    height: 5%;
-    background-color: #1a1a1d;
-    color: #ddd;
- }
-
- @media (max-width: 767px) {
-    .booking_form .row .col-md-3 {
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
-}
-
-@media (max-width: 575px) {
-    .booking_form .row .col-md-3 {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-}
-
-    /* REKOMENDASI */
-    .carousel-item img {
-      width: 70%;
-      height: 70%;
-      object-fit: cover;
+    .text h2{
+        font-size: 50px;
+        color: white;
+        font-weight: 600;
+        text-transform: capitalize;
     }
 
-    .container h2{
-        font-size: 40px;
+    .text-p{
+        margin-top: 10%;
+        color: white;
+        font-size: 1.2em;
     }
-    .container p{
-        font-size: 20px;
+
+    /* BOOOKING */
+    .booking_container{
+    
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: -4%;
     }
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-    background-color: #00887A; /* Ubah warna ikon panah di sini */
-}
+
+    .booking_form{
+    
+        padding: 2rem;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        background-color: #00887A;
+        border-radius: 10px;
+        transform: translateY(-50%);
+        box-shadow: 5px 5px 20px rgba(0,0,0,0.1);
+    }
+    .input_grup{
+        flex: 1 1 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .input_grup input{
+        display: block;
+        width: 50%;
+        max-width: 150px;
+        padding-block: 5px;
+        color: var(--text-dark--);
+        font-size: 0.9rem;
+        outline : none;
+        border: none;
+    }
+
+    .pointer{
+        cursor: pointer;
+        position: relative;
+    }
+    .input_grup select{
+        display: block;
+        width: 100%;
+        max-width: 150px;
+        padding-block: 5px;
+        color: var(--text-dark--);
+        font-size: 0.9rem;
+        outline : none;
+        border: none;
+    }
+
+    .input_grup input{
+        display: block;
+        width: 50%;
+        max-width: 150px;
+        padding-block: 5px;
+        color: var(--text-dark--);
+        font-size: 0.9rem;
+        outline : none;
+        border: none;
+    }
+
+    .input_grup input::placeholder{
+        color: var(--text-light--);
+    } 
+    .input_grup button{
+        border-radius: 40px;
+        width: 60%;
+        height: 5%;
+        background-color: #1a1a1d;
+        color: #ddd;
+    }
+
+    @media (max-width: 767px) {
+        .booking_form .row .col-md-3 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+
+    @media (max-width: 575px) {
+        .booking_form .row .col-md-3 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+
+        /* REKOMENDASI */
+        .carousel-item img {
+        width: 70%;
+        height: 70%;
+        object-fit: cover;
+        }
+
+        .container h2{
+            font-size: 40px;
+        }
+        .container p{
+            font-size: 20px;
+        }
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+        background-color: #00887A; /* Ubah warna ikon panah di sini */
+    }
 
         /* ABOUT US */
         .section4 {
@@ -367,11 +367,81 @@
         padding: 40px 0;
       }
     }
+    .section6 label{
+        font-size: 2.5rem;
+        margin-left: 10%;
+    }
+    .section6 .btn-dark{
+    margin-left: 50%;
+    box-sizing: 20%;
+    
+    }
+
+    .section6 .card{
+        min-width: 300px;
+        border-radius: 40%;
+    }
+    .section6 h5{
+        text-align: left;
+        font-weight: 600;
+    }
+    .section6 p{
+        text-align: left;
+    }
+    .section6 .label{
+        font-size: 1rem;
+        text-align: left;
+    }
+    .section6 .btn-color{
+        background-color: #00887A;
+        color: white;
+        font-size: 1rem;
+        position: relative;
+        width: 40%;
+        height: 22%;
+        padding: 2%;
+        
+    }
+    .section6 .icons{
+        text-align: left;
+    }
+
+    .icons i {
+    font-size: 12px;
+    margin: 5px; /* Memberikan margin ke semua sisi */
+    }
+   /* Untuk layar kecil (ponsel) */
+@media (max-width: 576px) {
+    .card {
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+
+    .card-head {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+
+    .btn-right {
+        margin-top: 10px;
+        width: 20%;
+    }
+}
+
+/* Untuk layar sedang (tablet) */
+@media (min-width: 577px) and (max-width: 991px) {
+    .card {
+        width: calc(50% - 10px) !important;
+        margin-bottom: 20px;
+    }
+
+    .btn-right {
+        width: auto;
+    }
+}
     </style>
 </head>
 <body>
-
-
     <header>
         <nav class="navbar">
             <div class="logo">Hotel Citra Megah</div>
@@ -394,6 +464,7 @@
             </div>
         </div>
     </header>
+
             <section class="section_container booking_container">
                 <h2 class="text-primary">Booking Sekarang!</h2>
                 <form action="" class="booking_form">
@@ -409,7 +480,6 @@
                             </select>
                         </div>
                     </div>
-
                     <div class="input_grup">
                         <input type="text" id="check-in" name="check-in" value="Check In" required class="pointer" readonly>
                     </div>
@@ -491,9 +561,9 @@
                     <p>Kami adalah hotel mewah dengan layanan yang tak tertandingi dan keramahan yang hangat. Dengan lokasi strategis di pusat kota, kami menawarkan pengalaman menginap yang tak terlupakan bagi para tamu kami. Staf kami yang profesional dan berpengalaman siap membantu Anda menjadikan setiap kunjungan Anda menjadi istimewa.</p>
 
                     <div class="icons">
-                        <i class="fa-solid fa-martini-glass-citrus"></i>
-                        <i class="fa-solid fa-dumbbell"></i>
-                        <i class="fa-solid fa-calendar"></i>
+                        <i class="fa fa-cutlery"></i> Restaurant &nbsp;&nbsp;
+                        <i class="fa fa-dumbbell"></i> Gym &nbsp;&nbsp;
+                        <i class="fa fa-calendar"></i> Event
                     </div>
                     <div class="Read">
                         <button type="button" class="btn btn-dark">Read More</button>
@@ -502,40 +572,124 @@
             </section>
 
             
- 
-  <section class="section5 md-4 mb-4 my-5 ">
-    <p class="text-center mb-4 mt-5">Why Us</p>
-    <h2 class="text-center mb-4">Apa yang kami tawarkan di hotel ini untuk anda?</h2>
-    <div class="row justify-content-center d-flex ">
-      <div class="col-md-4 mb-4">
-        <div class="card mx-2 my-2 mt-5">
-          <div class="card-body text-center">
-            <i class="fas fa-star card-icon"></i>
-            <h5 class="card-title">Kualitas Terbaik</h5>
-            <p class="card-text text-dark">Kami selalu berkomitmen untuk menyediakan kualitas tempat tinggal terbaik, lengkap dengan segala hal, mulai dari pelayanan hingga fasilitas yang kami tawarkan.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="card mx-2 my-2 mt-5">
-          <div class="card-body text-center">
-            <i class="fas fa-map-marker-alt card-icon"></i>
-            <h5 class="card-title">Lokasi yang Strategis</h5>
-            <p class="card-text text-dark">Terletak di pusat kota, kami memposisikan lokasi mudah ke tempat-tempat penting, seperti pusat perbelanjaan, wisata, dan atraksi wisata terkenal.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 mb-5">
-        <div class="card mx-2 my-2 mt-5 mb-5">
-          <div class="card-body text-center">
-            <i class="fas fa-bed card-icon"></i>
-            <h5 class="card-title">Kenyamanan yang Luar Biasa</h5>
-            <p class="card-text text-dark">Kamar-kamar kami dilengkapi dengan segala fasilitas modern yang Anda butuhkan untuk tinggal yang nyaman.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        
+        <section class="section5 md-4 mb-4 my-5 ">
+            <p class="text-center mb-4 mt-5">Why Us</p>
+            <h2 class="text-center mb-4">Apa yang kami tawarkan di hotel ini untuk anda?</h2>
+            <div class="row justify-content-center d-flex ">
+            <div class="col-md-4 mb-4">
+                <div class="card mx-2 my-2 mt-5">
+                <div class="card-body text-center">
+                    <i class="fas fa-star card-icon"></i>
+                    <h5 class="card-title">Kualitas Terbaik</h5>
+                    <p class="card-text text-dark">Kami selalu berkomitmen untuk menyediakan kualitas tempat tinggal terbaik, lengkap dengan segala hal, mulai dari pelayanan hingga fasilitas yang kami tawarkan.</p>
+                </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card mx-2 my-2 mt-5">
+                <div class="card-body text-center">
+                    <i class="fas fa-map-marker-alt card-icon"></i>
+                    <h5 class="card-title">Lokasi yang Strategis</h5>
+                    <p class="card-text text-dark">Terletak di pusat kota, kami memposisikan lokasi mudah ke tempat-tempat penting, seperti pusat perbelanjaan, wisata, dan atraksi wisata terkenal.</p>
+                </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-5">
+                <div class="card mx-2 my-2 mt-5 mb-5">
+                <div class="card-body text-center">
+                    <i class="fas fa-bed card-icon"></i>
+                    <h5 class="card-title">Kenyamanan yang Luar Biasa</h5>
+                    <p class="card-text text-dark">Kamar-kamar kami dilengkapi dengan segala fasilitas modern yang Anda butuhkan untuk tinggal yang nyaman.</p>
+                </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section class="section6 md-4 mb-4 my-5 ">
+            <div class="card-head">
+                <label class="text-left mb-4">Kamar Terpopuler</label>
+            <a href="" class="btn btn-right btn-dark">See More</a>
+            </div>
+            
+            <div class="row justify-content-center d-flex ">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{asset('assets/standar.jpg')}}" class="card-img-top" alt="Standard">
+                    <div class="card-body">
+                      <h5 class="card-title text-left">Standard Room</h5>
+                      <p class="card-text">Kenyamanan sederhana dengan fasilitas lengkap.</p>
+                     <div class="icons">
+                        <i class="fas fa-user"><span>1</span></i>
+                     <i class="fas fa-bath"><span>1</span></i>
+                    <i class="fas fa-bed"><span>1</span></i>
+                     </div>
+                      <label for="" class="label"> <strong>400K </strong><small style="color: #00887A">/malam</small></label>
+                      <a href="#" class="btn btn-color">Booking</a>
+                    </div>
+                  </div>
+
+                  <div class="card" style="width: 19rem;">
+                    <img src="{{asset('assets/super room.jpg')}}" class="card-img-top" alt="Standard">
+                    <div class="card-body">
+                      <h5 class="card-title text-left">Superior Room</h5>
+                      <p class="card-text">Ruangan yang lebih luas dan peandangan yang indah</p>
+                      <div class="icons">
+                        <i class="fas fa-user"></span>1</span></i>
+                     <i class="fas fa-bath"><span>1</span></i>
+                    <i class="fas fa-bed"><span>1</span></i>
+                     </div>
+                      <label for="" class="label"> <strong>600K</strong> <small style="color: #00887A">/malam</small></label>
+                      <a href="#" class="btn btn-color">Booking</a>
+                    </div>
+                  </div>
+
+                  <div class="card" style="width: 18rem;">
+                    <img src="{{asset('assets/duluxeroom.jpg')}}" class="card-img-top" alt="Standard" height="185">
+                    <div class="card-body">
+                      <h5 class="card-title text-left">Duluxe  Twin Bed</h5>
+                      <p class="card-text">Kenyamanan dengan tempat tidur yang terpisah.</p>
+                      <div class="icons">
+                    <i class="fas fa-user"></span>2</span></i>
+                     <i class="fas fa-bath"><span>1</span></i>
+                    <i class="fas fa-bed"><span>2</span></i>
+                     </div>
+                      <label for="" class="label"> <strong>700K</strong> <small style="color: #00887A">/malam</small></label>
+                      <a href="#" class="btn btn-color">Booking</a>
+                    </div>
+                  </div>
+            </div>
+        </section>
+
+        <section class="section7 container mt-5 my-5">
+            <p class="text-center text-success">Hotel Service</p>
+            <h2 class="text-center mb-4">Layanan Hotel Citra Megah</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="image text-center">
+                        <img src="{{asset('assets/layanan.jfif')}}" class="rounded mx-auto d-block" alt="Layanan Kamar 24 Jam" width="300" height="150">
+                        <p class="mt-2">Layanan Kamar 24 Jam</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="image text-center">
+                        <img src="{{asset('assets/resto.jpg')}}" class="rounded mx-auto d-block" alt="Restoran Mewah" width="300" height="150">
+                        <p class="mt-2">Restoran Mewah</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <div class="image text-center d-flex flex-column align-items-center">
+                        <div class="d-flex">
+                            <img src="{{asset('assets/spa.jpg')}}" class="rounded" alt="Spa" width="200" height="150">
+                            <img src="{{asset('assets/kebugaran.jpg')}}" class="rounded ml-2" alt="Kebugaran" width="200" height="150">
+                        </div>
+                        <p class="mt-2">Spa dan Kebugaran</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+{{--======================================================================================= --}}
 {{-- ----------------------------------------SCRIPT-------------------------------- --}}
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
