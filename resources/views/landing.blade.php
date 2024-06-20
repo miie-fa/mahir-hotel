@@ -325,6 +325,7 @@
         }
         .textt .icons{
             font-family: "Outfit", sans-serif;
+            font-size: 20px;
             font-optical-sizing: auto;
             font-weight: <weight>;
             font-style: normal;
@@ -407,6 +408,7 @@
             color: white;
             font-size: 1rem;
             font-family: "Outfit", sans-serif;
+            font-size: 20px;
             font-optical-sizing: auto;
             font-style: normal;
         }
@@ -592,6 +594,69 @@
     }
 }
 
+/* FACILITY */
+.card-title {
+    text-align: center;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400; /* Sesuaikan dengan bobot font yang diinginkan */
+    font-style: normal;
+}
+
+.section9 .btn {
+    background-color: #00887A;
+    width: 15%;
+    height: 10%;
+    border-radius: 20px;
+    color: white;
+    font-size: 20px;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400; /* Sesuaikan dengan bobot font yang diinginkan */
+    font-style: normal;
+    margin-left: 5%;
+    margin-top: 2%;
+    text-align: center;
+    display: inline-block;
+    padding: 10px;
+}
+
+@media (max-width: 1200px) {
+    .section9 .btn {
+        width: 20%;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 992px) {
+    .section9 .btn {
+        width: 25%;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section9 .btn {
+        width: 40%;
+        font-size: 14px;
+        margin-left: 2%;
+    }
+}
+
+@media (max-width: 576px) {
+    .section9 .btn {
+        width: 80%;
+        font-size: 14px;
+        margin-left: 10%;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 
     </style>
 </head>
@@ -724,7 +789,7 @@
             
         
         <section class="section5 md-4 mb-4 my-5 ">
-            <p class="text-center mb-4 mt-5">Why Us</p>
+            <p class="text-center mb-4 mt-5" style="font-size: 2rem;">Why Us</p>
             <h2 class="text-center mb-4">Apa yang kami tawarkan di hotel ini untuk anda?</h2>
             <div class="row justify-content-center d-flex ">
             <div class="col-md-4 mb-4">
@@ -844,7 +909,7 @@
             <h2 class="text-center mb-4">Apa Yang Membuat Hotel Kami Sangat Cocok Untuk Anda?</h2>
             <div class="row mb-4 my-5 mt-5 position-relative">
                 <div class="col-md-6">
-                    <img src="{{asset('assets/duluxeroom.jpg')}}" alt="" class="img-fluid">
+                    <img src="{{asset('assets/pemandangan.webp')}}" alt="" class="img-fluid">
                 </div>
                 <div class="col-md-6">
                     <div class="paragraph p-4  overlap-paragraph">
@@ -855,7 +920,7 @@
             </div>
             <div class="row mb-4 my-5 mt-5 position-relative">
                 <div class="col-md-6">
-                    <img src="{{asset('assets/duluxeroom.jpg')}}" alt="" class="img-fluid">
+                    <img src="{{asset('assets/lok.jpg')}}" alt="" class="img-fluid">
                 </div>
                 <div class="col-md-6">
                     <div class="paragraph p-3 overlap-paragraph">
@@ -866,7 +931,7 @@
             </div>
             <div class="row mb-4 my-5 mt-5 position-relative">
                 <div class="col-md-6">
-                    <img src="{{asset('assets/duluxeroom.jpg')}}" alt="" class="img-fluid">
+                    <img src="{{asset('assets/interior.jpg')}}" alt="" class="img-fluid">
                 </div>
                 <div class="col-md-6">
                     <div class="paragraph p-3 overlap-paragraph">
@@ -876,6 +941,58 @@
                 </div>
             </div>
         </section>
+
+       <section class="section9 my-5">
+
+        <div class="card-title">
+            <p style="color: #00887A;font-size:20px;">Facility</p>
+            <h2 >Beberapa Fasilitas Hotel Kami</h2>
+        </div>
+        
+        <div class="row justify-content-center d-flex ">
+            <a href="" class="btn">
+                <i class="fa fa-bed"></i> 145 Kamar
+            </a>
+
+            <a href="" class="btn">
+                <i class="fa fa-utensils"></i>
+                Resturant
+            </a>
+
+            <a href="" class="btn">
+                <i class="fa fa-person-swimming"></i>
+                Kolam Renang
+            </a>
+            <a href="" class="btn">
+                <i class="fa fa-mosque"></i>
+                Mushola
+            </a>
+        </div>
+
+        <div class="row justify-content-center d-flex ">
+            <a href="" class="btn">
+                <i class="fa fa-wifi"></i>
+                Wi-fi
+            </a>
+
+            <a href="" class="btn">
+                <i class="fa-regular fa-clock"></i>
+                Layanan 24 jam
+            </a>
+
+            <a href="" class="btn">
+                <i class="fa fa-jug-detergent"></i>
+                Laundry
+            </a>
+            <a href="" class="btn">
+                <i class="fa fa-car"></i>
+            Antar jemput
+            </a>
+        </div>
+
+       </section>
+    
+
         
         
 
