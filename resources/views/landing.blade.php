@@ -13,6 +13,10 @@
     <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
 
     <style>
+    
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
     body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -38,9 +42,9 @@
     }
 
     .logo {
-        font-size: 24px;
-        font-family: 'Brush Script MT', cursive;
-        margin-left: 20;
+        font-size: 35px;
+        font-family: "Great Vibes", cursive;
+        margin-left: 10%;
     }
 
     .nav-links {
@@ -57,6 +61,9 @@
 
     .nav-links li a {
         text-decoration: none;
+        font-family: "Outfit", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
         color: #000;
         font-size: 16px;
     }
@@ -108,105 +115,127 @@
         font-size: 50px;
         color: white;
         font-weight: 600;
+        font-family: "Outfit", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: <weight>;
+        font-style: normal;
         text-transform: capitalize;
     }
 
     .text-p{
         margin-top: 10%;
         color: white;
+        font-family: "Outfit", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: <weight>;
+        font-style: normal;
         font-size: 1.2em;
     }
 
     /* BOOOKING */
-    .booking_container{
-    
-        margin-left: 5%;
-        margin-right: 5%;
-        margin-top: -4%;
+    .booking_container {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: -4%;
+  }
+
+  .booking_form {
+    padding: 2rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #00887A;
+    border-radius: 10px;
+    transform: translateY(-50%);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .input_grup {
+    flex: 1 1 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .input_grup input {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    display: block;
+    width: 50%;
+    max-width: 150px;
+    padding-block: 5px;
+    color: var(--text-dark--);
+    font-size: 0.9rem;
+    outline: none;
+    border: none;
+  }
+
+  .pointer {
+    cursor: pointer;
+    position: relative;
+  }
+
+  .input_grup select {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    display: block;
+    width: 100%;
+    max-width: 150px;
+    padding-block: 5px;
+    color: var(--text-dark--);
+    font-size: 0.9rem;
+    outline: none;
+    border: none;
+  }
+
+  .input_grup input::placeholder {
+    color: var(--text-light--);
+  }
+
+  .input_grup button {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    border-radius: 40px;
+    width: 60%;
+    height: 5%;
+    background-color: #1a1a1d;
+    color: #ddd;
+  }
+
+  /* Media query untuk tampilan responsif */
+  @media (max-width: 767px) {
+    .booking_form {
+      flex-direction: column;
+      align-items: stretch;
     }
 
-    .booking_form{
-    
-        padding: 2rem;
-        display: flex;
-        gap: 1rem;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        background-color: #00887A;
-        border-radius: 10px;
-        transform: translateY(-50%);
-        box-shadow: 5px 5px 20px rgba(0,0,0,0.1);
-    }
-    .input_grup{
-        flex: 1 1 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
+    .input_grup {
+      width: 100%;
+      max-width: none;
+      justify-content: flex-start;
     }
 
-    .input_grup input{
-        display: block;
-        width: 50%;
-        max-width: 150px;
-        padding-block: 5px;
-        color: var(--text-dark--);
-        font-size: 0.9rem;
-        outline : none;
-        border: none;
+    .input_grup input,
+    .input_grup select {
+      width: 100%;
+      max-width: none;
     }
 
-    .pointer{
-        cursor: pointer;
-        position: relative;
+    .input_grup button {
+      width: 100%;
+        height: 10vh;
+        font-family: "Outfit", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: <weight>;
+        font-style: normal;
     }
-    .input_grup select{
-        display: block;
-        width: 100%;
-        max-width: 150px;
-        padding-block: 5px;
-        color: var(--text-dark--);
-        font-size: 0.9rem;
-        outline : none;
-        border: none;
-    }
-
-    .input_grup input{
-        display: block;
-        width: 50%;
-        max-width: 150px;
-        padding-block: 5px;
-        color: var(--text-dark--);
-        font-size: 0.9rem;
-        outline : none;
-        border: none;
-    }
-
-    .input_grup input::placeholder{
-        color: var(--text-light--);
-    } 
-    .input_grup button{
-        border-radius: 40px;
-        width: 60%;
-        height: 5%;
-        background-color: #1a1a1d;
-        color: #ddd;
-    }
-
-    @media (max-width: 767px) {
-        .booking_form .row .col-md-3 {
-            flex: 0 0 50%;
-            max-width: 50%;
-        }
-    }
-
-    @media (max-width: 575px) {
-        .booking_form .row .col-md-3 {
-            flex: 0 0 100%;
-            max-width: 100%;
-        }
-    }
+  }
 
         /* REKOMENDASI */
         .carousel-item img {
@@ -217,9 +246,20 @@
 
         .container h2{
             font-size: 40px;
+            font-family: "Outfit", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: <weight>;
+            font-style: normal;
         }
         .container p{
             font-size: 20px;
+            font-family:"Outfit",sans-serif;
+            font-style:normal;
+        }
+        .container h6{
+            font-size: 20px;
+            font-family:"Outfit",sans-serif;
+            font-style:normal;
         }
         .carousel-control-prev-icon,
         .carousel-control-next-icon {
@@ -237,6 +277,10 @@
 
         .title {
             text-align: center;
+            font-family: "Outfit", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: <weight>;
+            font-style: normal;
             margin-bottom: 20px;
         }
 
@@ -244,11 +288,19 @@
             margin: 0;
             font-size: 1.5em;
             color: #00887A;
+            font-family: "Outfit", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: <weight>;
+            font-style: normal;
         }
 
         .textt h2 {
             margin: 10px 0 0 0;
             font-size: 2em;
+            font-family: "Outfit", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: <weight>;
+            font-style: normal;
         }
 
         .title img {
@@ -261,11 +313,21 @@
             text-align: center;
             margin-top: 20px;
             max-width: 800px;
+            
         }
 
         .textt p {
             font-size: 1em;
             line-height: 1.5;
+            font-family: "Outfit", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
+        .textt .icons{
+            font-family: "Outfit", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: <weight>;
+            font-style: normal;
         }
 
         .Read {
@@ -278,6 +340,10 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            font-family: "Outfit", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: <weight>;
+            font-style: normal;
         }
 
         .btn-dark {
@@ -340,9 +406,16 @@
         .section5 p{
             color: white;
             font-size: 1rem;
+            font-family: "Outfit", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
         }
         .section5 h2{
             color: white;
+            font-family: "Outfit", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: <weight>;
+            font-style: normal;
         }
         .card {
       background-color: rgba(255, 255, 255, 0.8);
@@ -352,6 +425,7 @@
     }
     .card-body {
       text-align: center;
+      font-family: "Outfit", sans-serif;font-optical-sizing: auto;font-style: normal;
 
     }
     .icon {
@@ -367,20 +441,37 @@
         padding: 40px 0;
       }
     }
-    .section6 label{
-        font-size: 2.5rem;
-        margin-left: 10%;
-    }
-    .section6 .btn-dark{
-    margin-left: 50%;
-    box-sizing: 20%;
+
+    /* KAMAR TERPOPULER */
     
+    .card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   margin-left: 5%;
+   margin-right: 5%;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
     }
+
+/* Label styling */
+.card-head label {
+    font-size:2rem;
+    font-weight: bold;
+}
 
     .section6 .card{
         min-width: 300px;
-        border-radius: 40%;
+        background-color: #f8f8f8;
+        margin: 2%;
     }
+    .card-img-top {
+        width: 110%;
+        height: auto;
+        object-fit: cover;
+        margin-left: -5%;
+        }
     .section6 h5{
         text-align: left;
         font-weight: 600;
@@ -410,35 +501,98 @@
     font-size: 12px;
     margin: 5px; /* Memberikan margin ke semua sisi */
     }
-   /* Untuk layar kecil (ponsel) */
-@media (max-width: 576px) {
-    .card {
-        width: 100% !important;
-        margin-bottom: 20px;
-    }
+   
+/* Button styling */
+.card-head .btn {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: white;
+    background-color: #333;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
 
+.card-head .btn:hover {
+    background-color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
     .card-head {
         flex-direction: column;
-        align-items: flex-start !important;
+        align-items: flex-start;
     }
 
-    .btn-right {
-        margin-top: 10px;
-        width: 20%;
+    .card-head label {
+        margin-bottom: 0.5rem;
+    }
+
+    .card-head .btn {
+        align-self: stretch;
+        text-align: center;
     }
 }
 
-/* Untuk layar sedang (tablet) */
-@media (min-width: 577px) and (max-width: 991px) {
-    .card {
-        width: calc(50% - 10px) !important;
-        margin-bottom: 20px;
-    }
+/* FOTURED */
 
-    .btn-right {
-        width: auto;
+.section8{
+    background-color: #f8f8f8;
+}
+.section8 h4{
+    padding-top: 5%;
+    font-family: "Outfit", sans-serif;
+     font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+}
+.section8 img{
+    margin-left: 20%;
+    width: 400px;
+    height: 300px;
+    border-radius: 20px;
+}
+.paragraph h2{
+    font-family: "Great Vibes", cursive;
+    font-size: 40px;
+    font-weight: <weight>;
+    font-style: normal;
+}
+.paragraph p{
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.overlap-paragraph {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(20%, -50%);
+    z-index: 1;
+    background-color: white; /* Adjust as needed for readability */
+    padding: 20px; /* Adjust padding as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional for better visual */
+    max-width: 600px; /* Set maximum width */
+    width: 100%; /* Ensure it is responsive */
+    border-radius: 20px;
+}
+@media (max-width: 768px) {
+    .section7, .section8 {
+        padding: 50px 0; /* Atur kembali padding untuk perangkat seluler */
+    }
+    .section8 .paragraph {
+        padding: 20px; /* Atur ruang isian paragraf di kolom */
+    }
+    .section8 .overlap-paragraph {
+        padding: 20px; /* Perluas isi ke jarak jauh */
+    }
+    .section8 img {
+        margin-left: 0; /* Clear spacing when compressed */
+        margin-bottom: 20px; /* Space between images */
     }
 }
+
+
     </style>
 </head>
 <body>
@@ -465,45 +619,41 @@
         </div>
     </header>
 
-            <section class="section_container booking_container">
-                <h2 class="text-primary">Booking Sekarang!</h2>
-                <form action="" class="booking_form">
-                    <div class="input_grup">
-                        <div>
-                            <select id="room-type" name="room-type" required>
-                                <option selected>Pilihan Kamar</option>
-                                <option value="standard">Standard Room</option>
-                                <option value="superior">Superior Room</option>
-                                <option value="twin">Twin Room</option>
-                                <option value="twin">Deluxe Room</option>
-                                <option value="twin">Suite Room</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="input_grup">
-                        <input type="text" id="check-in" name="check-in" value="Check In" required class="pointer" readonly>
-                    </div>
-
-                    <div class="input_grup">
-                        <input type="text" id="check-out" name="check-out" value="Check Out" required class="pointer" readonly>
-                    </div>
-
-                    <div class="input_grup">
-                        <label for="promo-code">Kode Promo:</label>
-                        <input type="text" id="promo-code" name="promo-code">
-                    </div>
-
-                    <div class="input_grup input_btn">
-                        <button type="button" class="btn btn-light">BOOKING</button>
-                    </div>
-                </form>
-                <script>
-                    document.addEventListener('DOMContentLoaded', function() {
-                        var checkIn = new Pikaday({ field: document.getElementById('check-in') });
-                        var checkOut = new Pikaday({ field: document.getElementById('check-out') });
-                    });
-                </script>
-            </section>
+    <section class="section_container booking_container">
+        <h2 class="text-primary text-center">Booking Sekarang!</h2>
+        <form action="" class="booking_form">
+          <div class="input_grup">
+            <div>
+              <select id="room-type" name="room-type" required>
+                <option selected>Pilihan Kamar</option>
+                <option value="standard">Standard Room</option>
+                <option value="superior">Superior Room</option>
+                <option value="twin">Twin Room</option>
+                <option value="twin">Deluxe Room</option>
+                <option value="twin">Suite Room</option>
+              </select>
+            </div>
+          </div>
+          <div class="input_grup">
+            <input type="text" id="check-in" name="check-in" value="Check In" required class="pointer" readonly>
+          </div>
+          <div class="input_grup">
+            <input type="text" id="check-out" name="check-out" value="Check Out" required class="pointer" readonly>
+          </div>
+          <div class="input_grup">
+            <input type="text" id="promo-code" name="promo-code" placeholder="Kode Promo">
+          </div>
+          <div class="input_grup input_btn">
+            <button type="button" class="btn btn-light">BOOKING</button>
+          </div>
+        </form>
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            var checkIn = new Pikaday({ field: document.getElementById('check-in') });
+            var checkOut = new Pikaday({ field: document.getElementById('check-out') });
+          });
+        </script>
+      </section>
 
             <div class="container my-5">
                 <h2 class="text-left mb-4">Rekomendasi</h2>
@@ -630,7 +780,7 @@
                   </div>
 
                   <div class="card" style="width: 19rem;">
-                    <img src="{{asset('assets/super room.jpg')}}" class="card-img-top" alt="Standard">
+                    <img src="{{asset('assets/super room.jpg')}}" class="card-img-top" alt="Suite">
                     <div class="card-body">
                       <h5 class="card-title text-left">Superior Room</h5>
                       <p class="card-text">Ruangan yang lebih luas dan peandangan yang indah</p>
@@ -645,15 +795,15 @@
                   </div>
 
                   <div class="card" style="width: 18rem;">
-                    <img src="{{asset('assets/duluxeroom.jpg')}}" class="card-img-top" alt="Standard" height="185">
+                    <img src="{{asset('assets/duluxeroom.jpg')}}" class="card-img-top" alt="Standard" style="height: 200px; object-fit: cover;">
                     <div class="card-body">
-                      <h5 class="card-title text-left">Duluxe  Twin Bed</h5>
+                      <h5 class="card-title text-left">Duluxe Twin Bed</h5>
                       <p class="card-text">Kenyamanan dengan tempat tidur yang terpisah.</p>
                       <div class="icons">
-                    <i class="fas fa-user"></span>2</span></i>
-                     <i class="fas fa-bath"><span>1</span></i>
-                    <i class="fas fa-bed"><span>2</span></i>
-                     </div>
+                        <i class="fas fa-user"></span>2</span></i>
+                        <i class="fas fa-bath"><span>1</span></i>
+                        <i class="fas fa-bed"><span>2</span></i>
+                      </div>
                       <label for="" class="label"> <strong>700K</strong> <small style="color: #00887A">/malam</small></label>
                       <a href="#" class="btn btn-color">Booking</a>
                     </div>
@@ -688,6 +838,46 @@
                 </div>
             </div>
         </section>
+
+        <section class="section8 my-5">
+            <h4 class="text-center mb-4" style="color: #00887A;">Fatured</h4>
+            <h2 class="text-center mb-4">Apa Yang Membuat Hotel Kami Sangat Cocok Untuk Anda?</h2>
+            <div class="row mb-4 my-5 mt-5 position-relative">
+                <div class="col-md-6">
+                    <img src="{{asset('assets/duluxeroom.jpg')}}" alt="" class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                    <div class="paragraph p-4  overlap-paragraph">
+                        <h2>Pemandangan kota yang memukau</h2>
+                        <p>Hotel Citra Megah adalah destinasi yang sempurna bagi <br>Anda yang menginginkan pengalaman menginap dengan <br> pemandangan kota yang memukau. Kami berada di jantung <br>kota, memberikan Anda pemandangan yang spektakuler, <br>memadukan keindahan arsitektur modern dengan lanskap perkotaan yang gemerlap.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-4 my-5 mt-5 position-relative">
+                <div class="col-md-6">
+                    <img src="{{asset('assets/duluxeroom.jpg')}}" alt="" class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                    <div class="paragraph p-3 overlap-paragraph">
+                        <h2>Lokasi hotel yang strategis</h2>
+                        <p>Lokasi yang strategis merupakan salah satu <br>keunggulan utama. Teerletak di pusat kota, Anda akan <br>menemukan diri Anda dikeilingi oleh kehidupan perkotaan  <br>yang dinamis. Hanya beberapa langkah dari hotel, Anda <br>dapat menjelajahi atraksi lokal,mengeksplorasi tempat-tempat <br> wisata populer dan menikmati kehidupan malam yang berwarna. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-4 my-5 mt-5 position-relative">
+                <div class="col-md-6">
+                    <img src="{{asset('assets/duluxeroom.jpg')}}" alt="" class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                    <div class="paragraph p-3 overlap-paragraph">
+                        <h2>Interior yang elegan dan modern</h2>
+                        <p>Di Hotel Citra Megah, kami menghadirkan keindahan interior yang <br>elegan dan modern  untuk memenuhi selera para tamu yang menghargai <br>sentuhan keanggunan dan kemewahan. Setiap ruangan kami dirancang  <br>dengan penuh perhatian terhadap detail, menciptakan atsmofer yang <br>mewah dan memikat. Bersiaplah untuk merasakan pengalaman menginap yang tak terlupakan di lingkungan yang begituindah dan menginspirasi.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
 
 {{--======================================================================================= --}}
 {{-- ----------------------------------------SCRIPT-------------------------------- --}}
