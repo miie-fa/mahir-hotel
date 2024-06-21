@@ -238,31 +238,31 @@
   }
 
         /* REKOMENDASI */
-        .carousel-item img {
+        .item-carousel img {
         width: 70%;
         height: 70%;
         object-fit: cover;
         }
 
-        .container h2{
+        .rekomendasi h2{
             font-size: 40px;
             font-family: "Outfit", sans-serif;
             font-optical-sizing: auto;
             font-weight: <weight>;
             font-style: normal;
         }
-        .container p{
+        .rekomendasi p{
             font-size: 20px;
             font-family:"Outfit",sans-serif;
             font-style:normal;
         }
-        .container h6{
+        .rekomendasi h6{
             font-size: 20px;
             font-family:"Outfit",sans-serif;
             font-style:normal;
         }
-        .carousel-control-prev-icon,
-        .carousel-control-next-icon {
+        .control-carousel,
+        .control-carousel-next {
         background-color: #00887A; /* Ubah warna ikon panah di sini */
     }
 
@@ -423,7 +423,7 @@
       background-color: rgba(255, 255, 255, 0.8);
       border:none;
       border-radius: 10%;
-      min-height: 250px; /* Atur tinggi minimum kartu */
+      min-height: 300px; /* Atur tinggi minimum kartu */
     }
     .card-body {
       text-align: center;
@@ -657,7 +657,76 @@
     }
 }
 
+    /* GALERI */
+    .container.text-center {
+    margin-top: 10%;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
 
+.container.text-center .row.mb-4 {
+    margin-top: 5%;
+}
+
+.container.text-center .row .col {
+    padding: 0 0; /* Menambahkan padding horizontal pada kolom untuk jarak antar gambar */
+}
+
+.container.text-center .row .col img {
+    max-height: 300px; /* Mengatur tinggi maksimum gambar */
+    object-fit: cover; /* Memastikan gambar mengisi area tanpa distorsi */
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #00887A; /* Ubah warna latar belakang panah */
+    background-size: 100%, 100%; /* Memastikan ikon panah memenuhi kontainer */
+}
+
+.carousel-control-prev-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23fff" viewBox="0 0 8 8"%3E%3Cpath d="M0 4l4 4 1-1.06L2.94 4 5 1.06 4 0 0 4z"/%3E%3C/svg%3E');
+}
+
+.carousel-control-next-icon {
+   
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23fff" viewBox="0 0 8 8"%3E%3Cpath d="M4.5 0L3.5.94 6.56 4 3.5 7.06 4.5 8 8 4.5z"/%3E%3C/svg%3E');
+}
+
+/* Tambahkan media queries untuk membuat tampilan responsif */
+@media (max-width: 1200px) {
+    .container.text-center .row .col img {
+        width: 90%; /* Atur ulang lebar gambar untuk layar besar */
+    }
+}
+
+@media (max-width: 992px) {
+    .container.text-center .row .col img {
+        width: 80%; /* Atur ulang lebar gambar untuk layar sedang */
+    }
+}
+
+
+/* AJAKAN */
+.section10{
+    background-color: #00887A;
+    text-align: center;
+    font-family: "Outfit", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    color: white;
+    padding: 20px;
+}
+.section10 .btn-parag{
+    color: white;
+    background-color: #1a1a1d;
+    margin-top: 5%;
+    width: 250px;
+    height:50px ;
+    padding: 2px;
+}
     </style>
 </head>
 <body>
@@ -720,12 +789,12 @@
         </script>
       </section>
 
-            <div class="container my-5">
+            <div class="container my-5 rekomendasi">
                 <h2 class="text-left mb-4">Rekomendasi</h2>
                 <p class="text-left mb-4">Dibawah ini adalah kamar yang kami rekomendasikan <br>untuk anda dan pastinya memiliki kualitas terbaik.</p>
                 <div id="roomCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
                   <div class="carousel-inner">
-                    <div class="carousel-item active">
+                    <div class="carousel-item active item-carousel">
                       <div class="row">
                         <div class="col-md-4">
                           <img src="{{asset('assets/standar.jpg')}}" alt="Standard Room">
@@ -733,19 +802,20 @@
                         </div>
                         <div class="col-md-4">
                           <img src="{{asset('assets/super room.jpg')}}" alt="Superior Room">
-                            <h6>Superior Room</h6>
+                          <h6>Seperior Room</h6>
+                           
                         </div>
                         <div class="col-md-4">
                           <img src="{{asset('assets/twinroom.jfif')}}" alt="Twin Room">
-                            <h6>Twin Room</h6>
+                          <h6>Twin Room</h6>
                         </div>
                       </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item item-carousel">
                       <div class="row">
                         <div class="col-md-4">
                           <img src="{{asset('assets/duluxeroom.jpg')}}" alt="Deluxe Room">
-                            <h6>Deluxe Room</h6>
+                            <h6>Duluxe Room</h6>
                         </div>
                         <div class="col-md-4">
                           <img src="{{asset('assets/suiteroom.jpg')}}" alt="Suite Room">
@@ -755,11 +825,11 @@
                     </div>
                   </div>
                   <a class="carousel-control-prev" href="#roomCarousel" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="carousel-control-prev-icon control-carousel" aria-hidden="true"></span>
                     <span class="sr-only"></span>
                   </a>
                   <a class="carousel-control-next" href="#roomCarousel" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="carousel-control-next-icon control-carousel-next" aria-hidden="true"></span>
                     <span class="sr-only"></span>
                   </a>
                 </div>
@@ -981,7 +1051,7 @@
             </a>
 
             <a href="" class="btn">
-                <i class="fa fa-jug-detergent"></i>
+                <i class="fa fa-water"></i>
                 Laundry
             </a>
             <a href="" class="btn">
@@ -989,19 +1059,102 @@
             Antar jemput
             </a>
         </div>
-
        </section>
-    
 
-        
-        
+       <div class="container text-center">
+        <div class="title-h2">
+          <h2>Galeri Kami</h2>
+        </div>
+       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+              <div class="row mb-4">
+                <div class="col mb-3">
+                  <img src="{{asset('assets/mushola.jpg')}}" alt="" style="width: 250px;height:300px;">
+                </div>
+                <div class="col mb-3">
+                  <img src="{{asset('assets/backec.jfif')}}" alt="" style="width: 230px;height:300px;">
+                </div>
+                <div class="col mb-3">
+                  <img src="{{asset('assets/resto.jpg')}}" alt="" style="width: 400px;height:300px;">
+                </div>
+                <div class="col mb-3">
+                  <img src="{{asset('assets/laundry.jfif')}}" alt="" style="width: 200px;height:300px;">
+                </div>
+                <div class="col mb-3">
+                    <img src="{{asset('assets/spa.jpg')}}" alt="" style="width: 250px;height:300px;">
+                  </div>
+                  <div class="col mb-3">
+                    <img src="{{asset('assets/twinroom.jfif')}}" alt="" style="width: 350px;height:300px;">
+                  </div>
+                  <div class="col mb-3">
+                    <img src="{{asset('assets/lobi.jfif')}}" alt="" style="width: 300px;height:300px;">
+                  </div>
+                  <div class="col mb-3">
+                    <img src="{{asset('assets/kebugaran.jpg')}}" alt="" style="width: 200px;height:300px;">
+                  </div>
+              </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row mb-4">
+                <div class="col mb-3">
+                    <img src="{{asset('assets/about.jpg')}}" alt="" style="width: 250px;height:300px;">
+                  </div>
+                  <div class="col mb-3">
+                    <img src="{{asset('assets/kolam.jfif')}}" alt="" style="width: 350px;height:300px;">
+                  </div>
+                  <div class="col mb-3">
+                    <img src="{{asset('assets/interior.jpg')}}" alt="" style="width: 300px;height:300px;">
+                  </div>
+                  <div class="col mb-3">
+                    <img src="{{asset('assets/super room.jpg')}}" alt="" style="width: 200px;height:300px;">
+                  </div>
+                <div class="col mb-3">
+                  <img src="{{asset('assets/standar.jpg')}}" alt="" style="width: 250px;height:300px;">
+                </div>
+                <div class="col mb-3">
+                  <img src="{{asset('assets/hotel.jfif')}}" alt="" style="width: 230px;height:300px;">
+                </div>
+                <div class="col mb-3">
+                  <img src="{{asset('assets/lok.jpg')}}" alt="" style="width: 400px;height:300px;">
+                </div>
+                <div class="col mb-3">
+                  <img src="{{asset('assets/balroom.jfif')}}" alt="" style="width: 200px;height:300px;">
+                </div>
+              </div>
+            </div>
+          
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
 
+    <section class="section10">
+        <div class="text-prag">
+            Jangan lewatkan kesempatan untuk menginap di Hotel Citra Megah <br> dan rasakan pengalaman menginap yang tak terlupakan. Pesan sekarang <br> untuk mendapatkan harga spesial dan penawaran terbatas!.
+        </div>
+        <a href="" class="btn btn-parag">Booking Sekarang!</a>
+    </section>
 {{--======================================================================================= --}}
 {{-- ----------------------------------------SCRIPT-------------------------------- --}}
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
 </body>
 </html>
