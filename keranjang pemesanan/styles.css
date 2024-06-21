@@ -1,0 +1,66 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.card {
+    border: none;
+    border-radius: 0;
+}
+
+.card-img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.card-title {
+    font-size: 1.5rem;
+}
+
+.detail-pemesanan h4 {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.detail-pemesanan ul {
+    margin: 0;
+    padding: 0;
+}
+
+.detail-pemesanan ul li {
+    padding: 0.5rem 0;
+}
+
+footer {
+    background-color: #343a40;
+}
+
+footer h5 {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 0.5rem;
+}
