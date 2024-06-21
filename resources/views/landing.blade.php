@@ -28,7 +28,7 @@
     height: 90vh;
     background-size: cover;
     position: relative;
-    background-image:url({{asset('assets/suiteroom.jpg')}});
+    background-image:url({{asset('assets/room.webp')}});
     }
 
 
@@ -131,6 +131,61 @@
         font-style: normal;
         font-size: 1.2em;
     }
+
+    /* Media query untuk layar berukuran kecil (misalnya, smartphone) */
+@media screen and (max-width: 768px) {
+    header {
+        height: auto; /* Ubah tinggi menjadi dinamis */
+        min-height: 100vh; /* Set minimal tinggi agar tetap penuh layar */
+        padding-top: 20px; /* Tambahkan ruang atas */
+    }
+
+    .navbar {
+        flex-direction: column; /* Tampilkan item nav dalam satu kolom */
+        align-items: flex-start; /* Mulai dari kiri */
+        padding: 10px; /* Sesuaikan padding */
+    }
+
+    .logo {
+        margin-left: 10px; /* Sesuaikan margin */
+        font-size: 30px; /* Sesuaikan ukuran font */
+        text-align: left; /* Tekstur kiri */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Tampilkan link dalam satu kolom */
+        gap: 10px; /* Sesuaikan jarak antar link */
+        margin-top: 10px; /* Tambahkan margin atas */
+        padding-left: 10px; /* Sesuaikan padding */
+    }
+
+    .nav-links li {
+        margin-left: 0; /* Hapus margin kiri */
+        text-align: left; /* Tekstur kiri */
+    }
+
+    .login-signup {
+        margin-top: 10px; /* Tambahkan margin atas */
+        margin-right: 10px; /* Tambahkan margin kanan */
+        justify-content: flex-end; /* Posisi ke kanan */
+    }
+
+    .main .text {
+        top: 10%; /* Sesuaikan posisi teks */
+        left: 5%; /* Sesuaikan posisi teks */
+        text-align: center; /* Teks ke tengah */
+    }
+
+    .text h2 {
+        font-size: 30px; /* Sesuaikan ukuran font */
+        text-align: center; /* Teks ke tengah */
+    }
+
+    .text-p {
+        margin-top: 5%; /* Sesuaikan margin atas */
+        text-align: center; /* Teks ke tengah */
+    }
+}
 
     /* BOOOKING */
     .booking_container {
@@ -304,9 +359,9 @@
         }
 
         .title img {
-            width: 100%;
-            max-width: 400px;
-            height: auto;
+            width:500px;
+            max-width: 900px;
+            height: 500px;
             border-radius: 8px;
         }
         .textt {
@@ -727,6 +782,216 @@
     height:50px ;
     padding: 2px;
 }
+/* Tambahkan media queries untuk membuat tampilan responsif */
+@media (max-width: 1200px) {
+    .section10 {
+        font-size: 18px; /* Sesuaikan ukuran font untuk layar besar */
+    }
+    .section10 .btn-parag {
+        width: 220px; /* Sesuaikan lebar tombol untuk layar besar */
+        height: 45px; /* Sesuaikan tinggi tombol untuk layar besar */
+    }
+}
+
+@media (max-width: 992px) {
+    .section10 {
+        font-size: 16px; /* Sesuaikan ukuran font untuk layar sedang */
+        padding: 15px; /* Sesuaikan padding untuk layar sedang */
+    }
+    .section10 .btn-parag {
+        width: 200px; /* Sesuaikan lebar tombol untuk layar sedang */
+        height: 40px; /* Sesuaikan tinggi tombol untuk layar sedang */
+    }
+}
+
+@media (max-width: 768px) {
+    .section10 {
+        font-size: 14px; /* Sesuaikan ukuran font untuk tablet */
+        padding: 10px; /* Sesuaikan padding untuk tablet */
+    }
+    .section10 .btn-parag {
+        width: 180px; /* Sesuaikan lebar tombol untuk tablet */
+        height: 35px; /* Sesuaikan tinggi tombol untuk tablet */
+    }
+}
+
+@media (max-width: 576px) {
+    .section10 {
+        font-size: 12px; /* Sesuaikan ukuran font untuk layar kecil */
+        padding: 10px; /* Sesuaikan padding untuk layar kecil */
+    }
+    .section10 .btn-parag {
+        width: 160px; /* Sesuaikan lebar tombol untuk layar kecil */
+        height: 30px; /* Sesuaikan tinggi tombol untuk layar kecil */
+        font-size: 14px; /* Sesuaikan ukuran font tombol untuk layar kecil */
+    }
+}
+
+/* FOOTER */
+.footer {
+    background-color: #1a1a1d;
+    color: white;
+    padding: 40px 0;
+}
+.footer h4 {
+    font-family: "Outfit", sans-serif;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.footer .icons{
+    margin-top: 10%;
+}
+.footer .icons p{
+    font-size: 20px;
+}
+.footer .icons i{
+    font-size: 25px; /* Besarkan ukuran ikon */
+    transition: transform 0.3s; /* Animasi untuk efek hover */
+    color: #00887A;
+}
+
+.icons i:hover {
+    transform: scale(1.2); /* Membesarkan ikon saat dihover */
+
+}
+
+.footer p,
+.footer ul,
+.footer li,
+.footer a {
+    font-family: "Outfit", sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+
+.footer ul {
+    padding-left: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer ul li a {
+    color: white;
+    transition: color 0.3s;
+}
+
+.footer ul li a:hover {
+    color: #00887A;
+}
+
+.footer .social-icons {
+    margin-top: 20px;
+}
+
+.footer .social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    transition: opacity 0.3s;
+
+}
+
+
+.footer .social-icons a:hover {
+    opacity: 0.7;
+}
+
+.social-icons ul {
+    list-style-type: none; /* Menghapus bullet points dari daftar */
+    padding: 0;
+    margin: 0;
+}
+
+.social-icons ul li {
+    margin-bottom: 20px; /* Ruang antara setiap item */
+}
+
+.social-icons img {
+    width: 50px; /* Ukuran gambar */
+    height: 50px; /* Ukuran gambar */
+    object-fit: cover; /* Memastikan gambar mengisi area tanpa distorsi */
+    margin-right: 15px; /* Ruang antara gambar dan teks */
+    float: left; /* Membuat gambar berada di sebelah kiri */
+}
+
+.social-icons p {
+    font-size: 14px; /* Ukuran teks */
+    line-height: 1.5; /* Spasi baris */
+    margin: 0; /* Menghapus margin bawaan */
+    float: right;
+}
+
+/* Clear float untuk mengatasi overflow */
+.social-icons:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .footer {
+        text-align: center;
+    }
+
+    .footer .container .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer .container .row .col-md-4 {
+        margin-bottom: 30px;
+    }
+}
+
+.contact-list {
+    list-style-type: none; /* Menghapus bullet points dari daftar */
+    padding: 0;
+    margin: 0;
+}
+
+.contact-list li {
+    margin-bottom: 10px; /* Ruang antara setiap item daftar */
+    display: flex;
+    align-items: center; /* Memastikan ikon dan teks sejajar secara vertikal */
+}
+
+.contact-list li i {
+    margin-right: 10px; /* Ruang antara ikon dan teks */
+    font-size: 18px; /* Ukuran ikon */
+    color: #00887A; /* Warna ikon */
+}
+
+.contact-list li span {
+    display: inline-block;
+    vertical-align: middle; /* Memastikan teks sejajar dengan ikon */
+    max-width: calc(100% - 30px); /* Menghindari teks meluber keluar dari kolom */
+}
+
+.contact-list li i.fa-phone,
+.contact-list li i.fa-envelope,
+.contact-list li i.fa-location-dot {
+    min-width: 20px; /* Lebar minimum untuk ikon, memastikan konsistensi jarak */
+}
+
+.contact-list li {
+    font-size: 16px; /* Ukuran teks */
+    color: white; /* Warna teks */
+}
+
+.footer .copyright {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #ccc;
+}
+
     </style>
 </head>
 <body>
@@ -834,10 +1099,12 @@
                   </a>
                 </div>
               </div>
+              
             <section class="section4" id="aboutus">
                 <div class="title">
-                    <img src="{{asset('assets/about.jpg')}}" alt="Hotel Room">
+                    <img src="{{asset('assets/kamaar.jpg')}}" alt="Hotel Room">
                 </div>
+
                    
                 <div class="textt">
                     <h4>About Us</h4>
@@ -1142,6 +1409,77 @@
         </div>
         <a href="" class="btn btn-parag">Booking Sekarang!</a>
     </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h4 style="font-family:Great Vibes, cursive;font-size: 35px;">Hotel Citra Megah</h4>
+                    <p>Hotel Citra Megah, hotel bintang lima terbaik <br> di Indonesia dengan lokasi yang statergis</p>
+                    
+                   <div class="icons">
+                    <p>Follow Us</p>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                   </div>
+
+
+                </div>
+                <div class="col-md-3">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Term & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4>Recent Post</h4>
+                    <div class="social-icons">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img src="{{asset('assets/hotel.jfif')}}" alt="post">
+                                    <p>Menemukan <br>Kesempurnaan dalam <br>Kesenangan Mengin...</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="{{asset('assets/interior.jpg')}}" alt="Twitter">
+                                    <p>Menjadi Tuan Rumah <br>yang Tepat: Konferensi <br>dan Acara Bisnis di...</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="{{asset('assets/resto.jpg')}}" alt="Instagram">
+                                    <p>Mengenal Dapur Lezat <br>Hotel Citra Megah: <br>Sebuah Petualangan...</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <h4>Contact Us</h4>
+                    <ul class="contact-list">
+                        <li><i class="fa-solid fa-phone"></i><span>123-567-890</span></li>
+                        <li><i class="fa-regular fa-envelope"></i><span>hotelcitramegah@gmail.com</span></li>
+                        <li><i class="fa-solid fa-location-dot"></i><span>Jl. Raya Krapyak, Jl. Karanganyar Raya, Wedomartani, Kec. Ngemplak, Kabupaten Sleman, Daerah Istimewa Yogyakarta 555584</span></li>
+                    </ul>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-12">
+                        <hr>
+                        <p class="copyright"> Copyright <span> &copy;</span> 2024 Hotel Citra Megah</p>
+                    </div>
+            </div>
+        </div>
+    </footer>
+    
 {{--======================================================================================= --}}
 {{-- ----------------------------------------SCRIPT-------------------------------- --}}
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
