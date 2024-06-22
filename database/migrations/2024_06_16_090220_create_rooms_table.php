@@ -13,13 +13,9 @@ return new class extends Migration
 {
     Schema::create('rooms', function (Blueprint $table) {
         $table->id();
-        $table->string('type');
-        $table->text('facilities');
-        $table->decimal('price', 10, 2);
-        $table->string('image');
-        $table->date('available_from');
-        $table->date('available_to');
-        $table->timestamps();
+            $table->string('type');
+            $table->decimal('price_per_night', 10, 2);
+            $table->timestamps();
     });
 }
 
