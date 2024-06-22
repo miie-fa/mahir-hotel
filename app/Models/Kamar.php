@@ -17,4 +17,9 @@ class Kamar extends Model
         'price_per_night',
         'capacity'
     ];
+
+    public function reservations()
+    {
+        return $this->hasMany(Reservation::class, 'room_id');
+    }
 }

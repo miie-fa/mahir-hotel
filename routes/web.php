@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\KamarController;
+use App\Http\Controllers\ReservationController;
 
 
 Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
@@ -23,3 +24,6 @@ Route::post('/kamar/create', [KamarController::class, 'store'])->name('kamar.sto
 Route::get('/kamar/edit/{id}', [KamarController::class, 'edit'])->name('kamar.edit');
 Route::put('/kamar/{kamar}', [KamarController::class, 'update'])->name('kamar.update');
 Route::delete('/kamar/{kamar}', [KamarController::class, 'destroy'])->name('kamar.destroy');
+
+// Route Keranjang-pemesanan
+Route::get('/keranjang-pemesanan', [ReservationController::class, 'index'])->name('keranjang-pemesanan.index');
