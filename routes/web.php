@@ -24,8 +24,8 @@ use App\Http\Controllers\ProfileController;
 
 // Home Route
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('landing');
+})->name('landing');
 
 // Authentication Routes
 Route::get('/register', [RegisteredUserController::class, 'create'])->name('register');
