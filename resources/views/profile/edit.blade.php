@@ -1,36 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Profile</title>
-</head>
-<body>
-    <h1>Edit Profile</h1>
+@extends('layouts.app')
+
+@section('content')
+<div class="container">
+    <h2>Edit Profile</h2>
 
     @if (session('status'))
-        <div>{{ session('status') }}</div>
+        <div class="alert alert-success">
+            {{ session('status') }}
+        </div>
     @endif
 
     <form method="POST" action="{{ route('profile.update') }}">
         @csrf
-        <div>
+        @method('PATCH')
+
+        <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" id="name" name="name" value="{{ old('name', $user->name) }}" required>
+            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name', $user->name) }}" required autofocus>
+
+            @error('name')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
         </div>
-        <div>
+
+        <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" value="{{ old('email', $user->email) }}" required>
+            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email', $user->email) }}" required>
+
+            @error('email')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
         </div>
-        <div>
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password">
-        </div>
-        <div>
-            <label for="password_confirmation">Confirm Password</label>
-            <input type="password" id="password_confirmation" name="password_confirmation">
-        </div>
-        <button type="submit">Update Profile</button>
+
+        <button type="submit" class="btn btn-primary">
+            Save
+        </button>
     </form>
-</body>
-</html>
+
+    <form method="POST" action="{{ route('profile.destroy') }}" class="mt-3">
+        @csrf
+        @method('DELETE')
+
+        <button type="submit" class="btn btn-danger">
+            Delete Account
+        </button>
+    </form>
+</div>
+@endsection

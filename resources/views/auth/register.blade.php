@@ -66,7 +66,21 @@
         cursor: pointer;
         background: #1a1a1d;
         color: white;
+        }
 
+        .login-link {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .login-link a {
+            color: #1a1a1d;
+            text-decoration: none;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
         }
      </style>
 </head>
@@ -103,6 +117,10 @@
             </div>
             <button type="submit" class="sign-btn">Register</button>
         </form>
+
+        <div class="login-link">
+            <p>Already have an account? <a href="{{ route('login') }}">Click to login</a></p>
+        </div>
     </div>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>

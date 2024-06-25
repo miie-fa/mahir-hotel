@@ -89,6 +89,21 @@ color: white;
     font-size: 25px;
     padding: 0 10px;
 }
+
+.register-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.register-link a {
+    color: #1a1a1d;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
  </style>
 </head>
 <body class="body">
@@ -132,6 +147,10 @@ color: white;
             <i class="fa-brands fa-google"></i>
             <i class="fa-brands fa-twitter"></i>
             <i class="fa-brands fa-github"></i>
+        </div>
+
+        <div class="register-link">
+            <p>Don't have an account? <a href="{{ route('register') }}">Click to register</a></p>
         </div>
     </div>
 
