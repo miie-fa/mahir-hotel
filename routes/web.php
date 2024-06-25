@@ -9,6 +9,11 @@ use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\Auth\EmailVerificationNotificationController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\NewPasswordController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\Auth\RegisterController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -39,9 +44,9 @@ Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
     ->name('logout');
 
 // Registration routes
-Route::get('register', [RegisteredUserController::class, 'create'])
-    ->name('register');
-Route::post('register', [RegisteredUserController::class, 'store']);
+Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
+Route::post('/register', [RegisterController::class, 'register']);
+
 
 // Profile routes
 Route::middleware('auth')->group(function () {
@@ -69,3 +74,11 @@ Route::get('reset-password/{token}', [NewPasswordController::class, 'create'])
     ->name('password.reset');
 Route::post('reset-password', [NewPasswordController::class, 'store'])
     ->name('password.update');
+
+    Route::group(['middleware' => 'admin'], function(){
+        Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
+    });
+    
+    Route::group(['middleware' => 'user'], function(){
+        Route::get('/user/dashboard', [UserController::class, 'index'])->name('user.dashboard');
+    });
