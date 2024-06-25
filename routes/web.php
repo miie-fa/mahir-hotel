@@ -12,7 +12,7 @@ use App\Http\Controllers\Auth\NewPasswordController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Auth\RegisterController;
-
+use App\Http\Controllers\Auth\LoginController;
 
 
 /*
@@ -82,3 +82,5 @@ Route::post('reset-password', [NewPasswordController::class, 'store'])
     Route::group(['middleware' => 'user'], function(){
         Route::get('/user/dashboard', [UserController::class, 'index'])->name('user.dashboard');
     });
+    
+    Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');

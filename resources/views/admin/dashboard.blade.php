@@ -1025,7 +1025,7 @@
 <body>
     <header>
         <nav class="navbar">
-            <div class="logo">Hotel Citra Megah</div>
+            <div class="logo">Dashboard Admin</div>
             <ul class="nav-links">
                 <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#rooms">Rooms</a></li>

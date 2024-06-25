@@ -16,22 +16,24 @@ class RegisterController extends Controller
     }
 
     public function register(Request $request)
-    {
-        $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:8|confirmed',
-        ]);
+{
+    $request->validate([
+        'name' => 'required|string|max:255',
+        'email' => 'required|string|email|max:255|unique:users',
+        'password' => 'required|string|min:8|confirmed',
+    ]);
 
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-        ]);
+    $user = User::create([
+        'name' => $request->name,
+        'email' => $request->email,
+        'password' => Hash::make($request->password),
+        'role' => 'user',  // Menetapkan 'user' sebagai role default
+    ]);
 
-        // Setelah registrasi, Anda mungkin ingin langsung melakukan login
-        auth()->login($user);
+    // auth()->login($user);
 
-        return redirect()->route('home'); // Asumsikan ada route yang bernama 'home'
-    }
+    return redirect()->route('login');
+}
+
+
 }
