@@ -1460,7 +1460,7 @@
                         <ul>
                             <li>
                                 <a href="#">
-                                    <img src="{{ asset('assets/hotel.jfif') }}" alt="post">
+                                    <img src="{{ asset('assets/hotel.jpg') }}" alt="post">
                                     <p>Menemukan <br>Kesempurnaan dalam <br>Kesenangan Mengin...</p>
                                 </a>
                             </li>
