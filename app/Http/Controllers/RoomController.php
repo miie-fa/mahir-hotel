@@ -33,4 +33,10 @@ class RoomController extends Controller
 
         return view('rooms.index', compact('rooms'));
     }
+
+    public function show($id)
+{
+    $room = Room::findOrFail($id);
+    return view('rooms.detail', compact('room'));
+}
 }

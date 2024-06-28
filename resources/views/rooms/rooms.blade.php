@@ -727,12 +727,31 @@
             });
         </script>
     </section>
+    <section class="topcard">
+        <div class="text">
+            <h3>pilih kamar</h3>
+        </div>
+        <div class="filter">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Filter:
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item"
+                        href="{{ route('rooms.search', ['sort_by' => 'highest_price']) }}">Termahal</a></li>
+                <li><a class="dropdown-item" href="{{ route('rooms.search', ['sort_by' => 'popularity']) }}">Populer</a>
+                </li>
+                <li><a class="dropdown-item"
+                        href="{{ route('rooms.search', ['sort_by' => 'lowest_price']) }}">Termurah</a></li>
+            </ul>
+        </div>
+    </section>
 
     <!-- Hasil Pencarian -->
-    @if(isset($rooms))
+    @if (isset($rooms))
         <h1>Room List</h1>
         <ul>
-            @foreach($rooms as $room)
+            @foreach ($rooms as $room)
                 <li>
                     Room Number: {{ $room->room_number }} <br>
                     Room Type: {{ $room->room_type }} <br>
@@ -742,39 +761,7 @@
             @endforeach
         </ul>
     @endif
-</section>
-<section class="topcard">
-    <div class="text">
-        <h3>pilih kamar</h3>
-    </div>
-    <div class="filter">
-        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
-            Filter:
-        </button>
-        <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="{{ route('rooms.search', ['sort_by' => 'highest_price']) }}">Termahal</a></li>
-            <li><a class="dropdown-item" href="{{ route('rooms.search', ['sort_by' => 'popularity']) }}">Populer</a></li>
-            <li><a class="dropdown-item" href="{{ route('rooms.search', ['sort_by' => 'lowest_price']) }}">Termurah</a></li>
-        </ul>
-    </div>
-</section>
-
-<!-- Hasil Pencarian -->
-@if(isset($rooms))
-    <h1>Room List</h1>
-    <ul>
-        @foreach($rooms as $room)
-            <li>
-                Room Number: {{ $room->room_number }} <br>
-                Room Type: {{ $room->room_type }} <br>
-                Price: {{ $room->price }} <br>
-                Available: {{ $room->is_available ? 'Yes' : 'No' }} <br>
-            </li>
-        @endforeach
-    </ul>
-@endif
-</section>
+    </section>
     <span class="roomlistgroup">
         <section class="roomlist">
             <div class="card mb-3" style="max-width: 900px">
