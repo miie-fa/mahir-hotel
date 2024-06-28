@@ -7,15 +7,26 @@ use App\Models\Room;
 
 class RoomController extends Controller
 {
+    const SORT_OPTIONS = [
+        'highest_price' => 'price_desc',
+        'lowest_price' => 'price_asc',
+        'popularity' => 'popularity_desc'
+    ];
+
     public function search(Request $request)
     {
+        $validated = $request->validate([
+            'room_type' => 'nullable|string',
+            'sort_by' => 'nullable|in:highest_price,lowest_price,popularity',
+        ]);
+
         $query = Room::query();
 
-        if ($request->has('room_type') && $request->room_type != 'Pilihan Kamar') {
+        if ($request->filled('room_type') && $request->room_type != 'Pilihan Kamar') {
             $query->where('room_type', $request->input('room_type'));
         }
 
-        if ($request->has('sort_by')) {
+        if ($request->filled('sort_by')) {
             switch ($request->input('sort_by')) {
                 case 'highest_price':
                     $query->orderBy('price', 'desc');
@@ -35,8 +46,8 @@ class RoomController extends Controller
     }
 
     public function show($id)
-{
-    $room = Room::findOrFail($id);
-    return view('rooms.detail', compact('room'));
-}
+    {
+        $room = Room::findOrFail($id);
+        return view('rooms.detail', compact('room'));
+    }
 }

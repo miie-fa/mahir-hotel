@@ -531,6 +531,7 @@
         }
 
         .topcard {
+            margin-top: 5%;
             margin-left: 5%;
             margin-bottom: 1%;
         }
@@ -542,11 +543,6 @@
 
         .roomlist {
             margin-left: 5%;
-            background-color: #f6f6f6;
-        }
-
-        .roomlist div {
-            background-color: #f6f6f6;
         }
 
         ul.split-list {
@@ -651,6 +647,50 @@
             height: 6rem;
 
         }
+
+        .roomdetail {
+            margin-left: 5%;
+        }
+
+        .roomdetail ul {
+            list-style-type: none;
+        }
+
+        .roomcard {
+            margin-left: 4%;
+            margin-right: 4%;
+            margin-bottom: 5%;
+            margin-top: 2%;
+            background-color: #f6f6f6;
+        }
+
+        .roomcard .card {
+            background-color: #f6f6f6;
+        }
+
+        .roomcard h1 {
+            margin-left: 1%;
+        }
+
+        .roomcard img {
+            height: 210px;
+        }
+
+        .roomcard .card {
+            margin-left: 1%;
+            margin-right: 1%;
+        }
+
+        .flex-logo {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .flex-logo i {
+            color: #00887a;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
     </style>
 </head>
 
@@ -674,254 +714,41 @@
         </button>
 
     </header>
-    <section class="resize">
-        <div class="text">
-            <h3>Ruangan Hotel Citra Megah</h3>
-            <p>
-                Hotel Citra Megah menyediakan beberapa ruangan yang tentunya
-                sangat cocok dengan selera anda, dengan tampilan, kualitas
-                dan fasilitas yang sangat terjamin <br />untuk menunjang
-                berbagai kebutuhan sehari hari anda, dan kami siap 24 jam
-                melayani anda jika membutuhkan bantuan apapun, ayo segera
-                pesan kamar di bawah ini<br />
-                dan dapatkan diskonya di pemesanan pertama anda!
-            </p>
-        </div>
-    </section>
-    <section class="section_container booking_container">
-        <form action="{{ route('rooms.search') }}" method="GET" class="booking_form">
-            <div class="input_grup">
-                <div>
-                    <select id="room-type" name="room_type" required>
-                        <option selected>Pilihan Kamar</option>
-                        <option value="standard">Standard Room</option>
-                        <option value="superior">Superior Room</option>
-                        <option value="twin">Twin Room</option>
-                        <option value="deluxe">Deluxe Room</option>
-                        <option value="suite">Suite Room</option>
-                    </select>
-                </div>
-            </div>
-            <div class="input_grup">
-                <input type="text" id="check-in" name="check_in" value="Check In" required class="pointer" readonly>
-            </div>
-            <div class="input_grup">
-                <input type="text" id="check-out" name="check_out" value="Check Out" required class="pointer" readonly>
-            </div>
-            <div class="input_grup">
-                <input type="text" id="promo-code" name="promo_code" placeholder="Kode Promo">
-            </div>
-            <div class="input_grup input_btn">
-                <button type="submit" class="btn btn-light">BOOKING</button>
-            </div>
-        </form>
-        <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                var checkIn = new Pikaday({
-                    field: document.getElementById('check-in')
-                });
-                var checkOut = new Pikaday({
-                    field: document.getElementById('check-out')
-                });
-            });
-        </script>
-    </section>
     <section class="topcard">
         <div class="text">
-            <h3>pilih kamar</h3>
+            <h1>Deluxe Twin Bed</h1>
         </div>
-        <div class="filter">
-            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Filter:
-            </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item"
-                        href="{{ route('rooms.search', ['sort_by' => 'highest_price']) }}">Termahal</a></li>
-                <li><a class="dropdown-item" href="{{ route('rooms.search', ['sort_by' => 'popularity']) }}">Populer</a>
-                </li>
-                <li><a class="dropdown-item"
-                        href="{{ route('rooms.search', ['sort_by' => 'lowest_price']) }}">Termurah</a></li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Hasil Pencarian -->
-    @if (isset($rooms))
-        <h1>Room List</h1>
-        <ul>
-            @foreach ($rooms as $room)
-                <li>
-                    Room Number: {{ $room->room_number }} <br>
-                    Room Type: {{ $room->room_type }} <br>
-                    Price: {{ $room->price }} <br>
-                    Available: {{ $room->is_available ? 'Yes' : 'No' }} <br>
-                </li>
-            @endforeach
-        </ul>
-    @endif
     </section>
     <span class="roomlistgroup">
-        <section class="roomlist">
+        <section class="roomdetail">
             <div class="card mb-3" style="max-width: 900px">
                 <div class="row g-0">
-                    <div class="col-md-5">
-                        <img src="{{ asset('assets/single.jpg') }}" class="img-fluid" alt="..." />
+                    <div class="col-md-12">
+                        <img src="{{asset('assets/deluxe.jpg')}}" class="img-fluid" alt="Deluxe Twin Bed">
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-12">
                         <div class="card-body">
-                            <h5 class="card-title">Single Room</h5>
-                            <div class="star-rating">
-                                <span class="fas fa-star"></span>
-                                <span class="fas fa-star"></span>
-                                <span class="fas fa-star"></span>
-                                <span class="fas fa-star"></span>
-                                <span class="fas fa-star"></span>
-                                <h6 class="star-amount">(735)</h6>
-                                <h6 class="roomavail">
-                                    | Tersisa 4 kamar lagi
-                                </h6>
+                            <div class="flex-b">
+                                <h5 class="card-title">Deluxe Twin Bed</h5>
+                                <div class="star-rating">
+                                    <span class="fas fa-star"></span>
+                                    <span class="fas fa-star"></span>
+                                    <span class="fas fa-star"></span>
+                                    <span class="fas fa-star"></span>
+                                    <span class="fas fa-star"></span>
+                                    <h6 class="star-amount">(735)</h6>
+                                </div>
                             </div>
+                            <p>Kamar Deluxe Twin Bed kami menawarkan kenyamanan dan ruang ekstra dengan dua tempat tidur single. Ideal untuk teman atau keluarga, kamar ini dilengkapi dengan semua fasilitas modern yang Anda butuhkan untuk masa menginap yang menyenangkan.</p>
                             <b class="card-text">Fasilitas</b>
                             <ul class="split-list">
-                                <li>1 kamar mandi</li>
-                                <li>Kulkas mini</li>
-                                <li>1 tempat tidur double</li>
-                                <li>High Speed WiFi</li>
-                                <li>Sarapan</li>
-                                <li>TV</li>
+                                <li><i class="fa fa-bath" aria-hidden="true"></i> 1 kamar mandi</li>
+                                <li><i class="fa fa-bed" aria-hidden="true"></i> 2 tempat tidur single</li>
+                                <li><i class="fa fa-wifi" aria-hidden="true"></i> High speed wifi</li>
+                                <li><i class="fa fa-archive" aria-hidden="true"></i> Kulkas mini</li>
+                                <li><i class="fa fa-coffee" aria-hidden="true"></i> Sarapan</li>
+                                <li><i class="fa fa-tv" aria-hidden="true"></i> TV</li>
                             </ul>
-                            <div class="flex">
-                                <h3 class="card-text">Rp 350.000</h3>
-
-                                <h6><span class="blue-text">/malam</span></h6>
-                                <button type="button" class="btn btn-dark">
-                                    Pesan Kamar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card mb-3" style="max-width: 900px">
-                <div class="row g-0">
-                    <div class="col-md-5">
-                        <img src="{{ asset('assets/standard.jpg') }}" class="img-fluid" alt="..." />
-                    </div>
-                    <div class="col-md-7">
-                        <div class="card-body">
-                            <h5 class="card-title">Standard Room</h5>
-                            <div class="star-rating">
-                                <span class="fas fa-star"></span>
-                                <span class="fas fa-star"></span>
-                                <span class="fas fa-star"></span>
-                                <span class="fas fa-star"></span>
-                                <span class="fas fa-star"></span>
-                                <h6 class="star-amount">(735)</h6>
-                                <h6 class="roomavail">
-                                    | Tersisa 3 kamar lagi
-                                </h6>
-                            </div>
-                            <b class="card-text">Fasilitas</b>
-                            <ul class="split-list">
-                                <li>1 kamar mandi</li>
-                                <li>Kulkas mini</li>
-                                <li>1 tempat tidur double</li>
-                                <li>High Speed WiFi</li>
-                                <li>Sarapan</li>
-                                <li>TV</li>
-                            </ul>
-                            <div class="flex">
-                                <h3 class="card-text">Rp 400.000</h3>
-
-                                <h6><span class="blue-text">/malam</span></h6>
-                                <button type="button" class="btn-selected">
-                                    Dipilih
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card mb-3" style="max-width: 900px">
-                <div class="row g-0">
-                    <div class="col-md-5">
-                        <span class="img-out"><img src="{{ asset('assets/superior.jpg') }}" class="img-fluid"
-                                alt="..." /></span>
-                    </div>
-
-                    <div class="col-md-7">
-                        <div class="card-body">
-                            <h5 class="card-title">Superior Room</h5>
-                            <div class="star-rating">
-                                <span class="fas fa-star"></span>
-                                <span class="fas fa-star"></span>
-                                <span class="fas fa-star"></span>
-                                <span class="fas fa-star"></span>
-                                <span class="fas fa-star"></span>
-                                <h6 class="star-amount">(735)</h6>
-                                <h6 class="roomout">
-                                    | Habis, tunggu di lain hari
-                                </h6>
-                            </div>
-                            <b class="card-text">Fasilitas</b>
-                            <ul class="split-list">
-                                <li>1 kamar mandi</li>
-                                <li>Kulkas mini</li>
-                                <li>1 tempat tidur double</li>
-                                <li>High Speed WiFi</li>
-                                <li>Sarapan</li>
-                                <li>TV</li>
-                            </ul>
-                            <div class="flex">
-                                <h3 class="card-text">Rp 600.000</h3>
-
-                                <h6><span class="blue-text">/malam</span></h6>
-                                <button type="button" class="btn-out">
-                                    Pesan Kamar
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card mb-3" style="max-width: 900px">
-                <div class="row g-0">
-                    <div class="col-md-5">
-                        <img src="{{ asset('assets/deluxe.jpg') }}" class="img-fluid" alt="..." />
-                    </div>
-                    <div class="col-md-7">
-                        <div class="card-body">
-                            <h5 class="card-title">Deluxe Twin Bed</h5>
-                            <div class="star-rating">
-                                <span class="fas fa-star"></span>
-                                <span class="fas fa-star"></span>
-                                <span class="fas fa-star"></span>
-                                <span class="fas fa-star"></span>
-                                <span class="fas fa-star"></span>
-                                <h6 class="star-amount">(735)</h6>
-                                <h6 class="roomavail">
-                                    | Tersisa 5 kamar lagi
-                                </h6>
-                            </div>
-                            <b class="card-text">Fasilitas</b>
-                            <ul class="split-list">
-                                <li>1 kamar mandi</li>
-                                <li>Kulkas mini</li>
-                                <li>2 tempat tidur</li>
-                                <li>High Speed WiFi</li>
-                                <li>Sarapan</li>
-                                <li>TV</li>
-                            </ul>
-                            <div class="flex">
-                                <h3 class="card-text">Rp 800.000</h3>
-
-                                <h6><span class="blue-text">/malam</span></h6>
-                                <button type="button" class="btn btn-dark">
-                                    Pesan Kamar
-                                </button>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -932,39 +759,123 @@
                 <div class="card-header"><b>Ringkasan Pemesanan</b></div>
                 <div class="card-body text-secondary">
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label"><i class="fa fa-calendar-check"></i>
-                            Check in</label>
-
-                        <input type="" class="form-control" id="exampleFormControlInput1"
-                            placeholder="Minggu, 20.00 - 16 July 2023">
+                        <label for="checkin" class="form-label"><i class="fa fa-calendar-check"></i> Check in</label>
+                        <input type="text" class="form-control" id="checkin" placeholder="Tanggal check-in">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label"><i class="fa fa-calendar-minus"></i>
-                            Check Out</label>
-                        <input type="" class="form-control" id="exampleFormControlInput1"
-                            placeholder="Senin, 20.00 - 17 July 2023">
+                        <label for="checkout" class="form-label"><i class="fa fa-calendar-minus"></i> Check Out</label>
+                        <input type="text" class="form-control" id="checkout" placeholder="Tanggal check-out">
                     </div>
-                    <p> <i class="fa fa-building"></i> Kamar</p>
-                    <div class="underlined-text">Superior Room</div>
+                    <p><i class="fa fa-building"></i> Kamar</p>
+                    <div class="underlined-text">Deluxe Twin Bed</div>
                     <div class="flex-a">
                         <p>1 malam</p>
-                        <h6>Rp 400.000</h6>
+                        <h6>Rp 800.000</h6>
                     </div>
                     <div class="flex-a">
                         <p class="underlined-text">Jumlah kamar :</p>
-
                         <h6>1 Kamar</h6>
                     </div>
                     <div class="flex-a">
                         <b>Total</b>
-                        <h5>Rp 700.000</h5>
+                        <h5>Rp 800.000</h5>
                     </div>
                     <div class="input_grup input_btn">
                         <button type="button" class="btn btn-light">Lanjutkan Pemesanan</button>
                     </div>
                 </div>
+            </div>
         </section>
     </span>
+        <section class="roomdetail">
+            <div class="card mb-3" style="max-width: 900px">
+                <div class="row g-0">
+                    <div class="col-md-12">
+                        <img src="../../public/assets/standard.jpg" class="img-fluid" alt="Standard Room">
+                    </div>
+                    <div class="col-md-12">
+                        <div class="card-body">
+                            <div class="flex-b">
+                                <h5 class="card-title">Standard Room</h5>
+                                <div class="star-rating">
+                                    <span class="fas fa-star"></span>
+                                    <span class="fas fa-star"></span>
+                                    <span class="fas fa-star"></span>
+                                    <span class="fas fa-star"></span>
+                                    <span class="fas fa-star"></span>
+                                    <h6 class="star-amount">(735)</h6>
+                                </div>
+                            </div>
+                            <p>Nikmati kenyamanan di kamar Standard kami yang dilengkapi dengan fasilitas modern untuk pengalaman menginap yang tak terlupakan.</p>
+                            <h5 class="card-text">Harga: IDR 500,000 / malam</h5>
+                            <p class="card-text"><small class="text-muted">Fasilitas: Wi-Fi Gratis, TV, AC, Kamar Mandi Pribadi</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <section class="roomcard">
+        <h1>Kamar Terpopuler</h1>
+        <div class="card-group">
+            <div class="card">
+                <img src="{{ asset('assets/standard.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Standard</h5>
+                    <p class="card-text">Kenyamanan sederhana dengan fasilitas lengkap</p>
+                    <p class="card-text"><small class="text-body-secondary">
+                            <div class="flex-logo">
+                                <i class="fa-solid fa-person"> 2</i>
+                                <i class="fa-solid fa-bath"> 1</i>
+                                <i class="fa-solid fa-bed"> 1</i>
+                            </div>
+                        </small></p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="{{ asset('assets/superior.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Superior Room</h5>
+                    <p class="card-text">Ruangan yang lebih luas dengan pemandangan yang indah</p>
+                    <p class="card-text"><small class="text-body-secondary">
+                            <div class="flex-logo">
+                                <i class="fa-solid fa-person"> 2</i>
+                                <i class="fa-solid fa-bath"> 1</i>
+                                <i class="fa-solid fa-bed"> 1</i>
+                            </div>
+                        </small></p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="{{ asset('assets/deluxe.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Deluxe Twin Bed</h5>
+                    <p class="card-text">Kenyamanan dengan tempat tidur terpisah</p>
+                    <p class="card-text"><small class="text-body-secondary">
+                            <div class="flex-logo">
+                                <i class="fa-solid fa-person"> 2</i>
+                                <i class="fa-solid fa-bath"> 1</i>
+                                <i class="fa-solid fa-bed"> 2</i>
+                            </div>
+                        </small></p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="{{ asset('assets/single.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Single</h5>
+                    <p class="card-text">Kenyamanan sederhana dengan fasilitas lengkap</p>
+                    <p class="card-text"><small class="text-body-secondary">
+                            <div class="flex-logo">
+                                <i class="fa-solid fa-person"> 1</i>
+                                <i class="fa-solid fa-bath"> 1</i>
+                                <i class="fa-solid fa-bed"> 1</i>
+                            </div>
+                        </small></p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer class="footer">
         <div class="container">
@@ -1053,6 +964,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+</body>
 </body>
 
 </html>
