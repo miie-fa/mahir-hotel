@@ -1,0 +1,156 @@
+#main-navbar {
+    border-bottom: 5px solid #f8f9fa;
+}
+
+#main-navbar a:hover,
+#main-navbar .active {
+    border-bottom-color: black;
+    transition: border-color 500ms;
+}
+
+#showcase {
+    background: url("assets/1.png") no-repeat center center/cover;
+    height: 300px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.bottom-left {
+    bottom: 0px;
+    left: 50px;
+    background-color: rgb(0, 52, 52);
+    padding: 10px;
+    height: 50px;
+    /* adjust as needed */
+    width: 150px;
+    /* adjust as needed */
+}
+
+.bottom-left h1 {
+    position: absolute;
+    bottom: 0px;
+    /* distance from the bottom of the parent */
+    left: 10px;
+    /* distance from the left of the parent */
+    font-size: 40px;
+    /* make text smaller */
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.room-gallery img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.custom-font {
+    font-family: 'Dancing Script', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.stars {
+    display: flex;
+}
+
+.rating i {
+    font-size: 1.5em;
+    color: gold;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    flex: 1 1 50%;
+    /* Membagi elemen menjadi dua kolom */
+    margin-bottom: 10px;
+    /* Jarak antara elemen */
+}
+
+.pemesanan {
+    background-color: #F2F2F2;
+}
+
+.booking-info {
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    margin-top: 0;
+    padding: 20px;
+}
+
+.booking-info div {
+    margin-bottom: 10px;
+}
+
+.booking-info .icon {
+    margin-right: 5px;
+}
+
+.booking-info strong {
+    display: inline-block;
+    width: 100px;
+}
+
+.booking-info .amount {
+    text-align: right;
+    float: right;
+}
+
+.cek {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #e3e2e2;
+    margin: 0px 0;
+}
+
+.white-hr {
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-group-half {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
