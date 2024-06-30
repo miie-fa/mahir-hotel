@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+
 
 class UserController extends Controller
 {
@@ -86,5 +88,7 @@ class UserController extends Controller
         $user->delete();
 
         return redirect()->route('user.index')->with('success', 'User deleted successfully.');
+        return view('user.dashboard'); // Mengembalikan view dashboard user
+
     }
 }

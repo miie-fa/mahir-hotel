@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register </title>
-    <link rel="stylesheet" href="{{mix('css/app.css')}}">
+    <title>Login</title>
+    <link rel="stylesheet" href="">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
@@ -76,7 +76,20 @@ background: #1a1a1d;
 color: white;
 
 }
-     </style>
+.label-sign{
+    margin-left: 40%;
+    margin-top: 5%;
+}
+
+.icons{
+    margin-left: 30%;
+    margin-top: 5%;
+}
+.icons i{
+    font-size: 25px;
+    padding: 0 10px;
+}
+ </style>
 </head>
 <body class="body">
             <div class="text">
@@ -108,8 +121,15 @@ color: white;
         <button class="sign-btn">Sign In</button>
         <div class="label-sign">
             <label for="">Or Sign With</label>
-            <li ></li>
         </div>
+        <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-google"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-github"></i>
+        </div>
+
+        
     </div>
         
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
