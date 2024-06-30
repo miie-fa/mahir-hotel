@@ -1,11 +1,11 @@
 <?php
 
+use App\Http\Controllers\BookingController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\KamarController;
 use App\Http\Controllers\ReservationController;
-
 
 Route::get('/', [DashboardController::class, 'index'])->name('dashboard.index');
 
@@ -27,3 +27,9 @@ Route::delete('/kamar/{kamar}', [KamarController::class, 'destroy'])->name('kama
 
 // Route Keranjang-pemesanan
 Route::get('/keranjang-pemesanan', [ReservationController::class, 'index'])->name('keranjang-pemesanan.index');
+
+Route::get('/booking', [BookingController::class,'main'])->name('booking.main');
+Route::post('/booking/process', [BookingController::class,'store'])->name('booking.store');
+Route::get('/booking/show', [BookingController::class,'show'])->name('booking.show');
+Route::get('/booking/delete', [BookingController::class,'destroy'])->name('batalkan.pemesanan');
+
